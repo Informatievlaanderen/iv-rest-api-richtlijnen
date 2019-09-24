@@ -1,0 +1,22 @@
+{
+  "name": "rest_api_richtlijnen_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path node_modules/@govflanders/ --include-path scss src/scss/style.scss  src/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@govflanders/vl-ui-content-header": "^3.9.1",
+    "@govflanders/vl-ui-core": "^3.9.1",
+    "@govflanders/vl-ui-introduction": "^3.9.1",
+    "@govflanders/vl-ui-side-navigation": "^3.9.1",
+    "@govflanders/vl-ui-textarea": "^3.9.1",
+    "@govflanders/vl-ui-titles": "^3.9.1",
+    "@govflanders/vl-ui-typography": "^3.9.1",
+    "node-sass": "^4.12.0"
+  }
+}

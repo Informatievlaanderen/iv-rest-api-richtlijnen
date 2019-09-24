@@ -1,0 +1,670 @@
+<html>
+    <head>
+        <title>
+            REST API richtlijnen - Informatie Vlaanderen
+        </title>
+        <base href="/">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="module" src="js/index.js"></script>
+    </head>
+
+    <body>
+        <div id="vlaanderen-header" style="min-height:44px;">
+            <!-- insert your global header here -->
+            <script src="//widgets.vlaanderen.be/widget/live/5ecf33a0a922428cb9d944c55362ed15" type="text/javascript"></script>
+            <!-- end global header-->
+        </div>
+
+        <header class="vl-content-header vl-content-header--large vl-content-header--has-logo vl-content-header--show-mobile">
+            <div class="vl-content-header__wrapper">
+                <picture class="vl-content-header__bg">
+                    <img sizes="100vw" src="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_narrow/header.jpg" srcset="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_mobile_alt/header.jpg 320w, //www.vlaanderen.be/sites/default/files/ip_acm/page_banner_narrow/header.jpg 1024w, //www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg 1600w" alt="Content Header">
+                </picture>
+                <div class="vl-layout">
+                    <div class="vl-content-header__content">
+                        <div class="vl-content-header__line vl-content-header__line-1"></div>
+                        <div class="vl-content-header__line vl-content-header__line-2 js-vl-content-header__line-2"></div>
+                        <div class="vl-content-header__line vl-content-header__line-3 js-vl-content-header__line-3"></div>
+                        <div class="vl-content-header__logo">
+                            <div class="vl-content-header__logo__img">
+                                <svg role="img" aria-labelledby="title" id="leeuw" data-name="leeuw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.61 31.05">
+                                    <title>Logo Vlaanderen</title>
+                                    <path id="Logo_Vlaanderen" data-name="Logo Vlaanderen" d="M19.61,16c-1.08-.82-1.59,0-2.27,0s-1.12-1-1.56-.75c-0.85.43,0.34,2,.86,2.27a12.51,12.51,0,0,0,1.18.59,1.72,1.72,0,0,1,1,1.55,3,3,0,0,1,0,.75c-0.31,1.32-2.64,2.52-4,1.61a3,3,0,0,1-1.4-2c-0.36-1.73-1.62-3-2-4.7-0.25-1-.43-2.12-0.7-3.15S10.17,10,9.94,9A27.44,27.44,0,0,0,9,5.92C7.71,2.61,7.14,2.85,7.14,2.85s0.46,0.92,2.15,9A47.8,47.8,0,0,0,10.42,17c0.16,0.42.44,1.32,0.62,1.72,0.54,1.16,2,2.92,2.05,4.51,0.05,0.92.16,1.68,0.18,2.37a7.37,7.37,0,0,0,.24,1.4c0.35,1,3.14,4.09,6.1,4.09V28.68a10.88,10.88,0,0,1-5.79-1.82,6.37,6.37,0,0,1,.35-1.7,2.78,2.78,0,0,1,2.39-1.94,17.91,17.91,0,0,1,3,.31V16ZM6.82,7.36c-0.11,1.77-2.87,4.2-3.73,5.75A11.43,11.43,0,0,0,2,15.95a7.53,7.53,0,0,0,.62,4.67c0.91,2.18-.12,3,0.59,2.54,0.88-.72.75-2.39,0.68-3.43a14.77,14.77,0,0,1,0-2.82A13.29,13.29,0,0,1,6.3,11.58a4.84,4.84,0,0,0,.52-4.22m0.56,5s0.29,1.4-1,5c-3.26,9.45,3,10.34,4.74,12.56,0,0,.69-1-2.14-4-1-1.12-2-3.6-1.15-7.15,1.17-5.13-.5-6.39-0.5-6.39M1.21,6.2A4.53,4.53,0,0,1,1,4.7C1.2,2.48,3.23,1.58,3.73,1.25A2.7,2.7,0,0,0,4.76,0,3,3,0,0,1,3.55,3.67,6.06,6.06,0,0,0,1.21,6.2M6.32,4.05c0.11,0.23,1,1.45-2.48,4.27s-2.36,4.84-2.36,4.84-3.66-2,.56-5.53S5.39,3.43,5.39,3.43a1.05,1.05,0,0,1,.93.63m4.46,1.08c0.59,0.08,1,1.92,2.35,2.32,1,0.29,2.08.13,2.32,0.74a0.52,0.52,0,0,0,.37.92C16.21,8,16.4,3.88,10.79,5.14ZM12.64,6c0-.13.12,0,0.27-0.12a1.66,1.66,0,0,1,.59-0.48,1,1,0,0,1,.62,0c0.12,0,0,.33,0,0.4s-0.74-.09-0.74.32c0,0.67.91,0,1.38,0,0.23,1.64-2.48,1.19-2.08-.16h0Z" />
+                                </svg>
+                            </div>
+                            <div class="vl-content-header__logo__text">
+                                <div class="vl-content-header__logo__title">
+                                    REST API richtlijnen
+                                    <span class="vl-content-header__logo__tagline">Informatie Vlaanderen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="vl-grid vl-layout">
+            <div class="vl-col--8-12">
+                <section class="vl-region">
+                    <p class="vl-introduction">
+                        Deze pagina bevat richtlijnen voor het bouwen van RESTful API's binnen Informatie Vlaanderen. Ze zijn van toepassing op nieuwe ontwikkelingen en bij grote herwerkingen van bestaande oplossingen.
+                        Dit document is het resultaat van een interne afstemming via de Expertise Groep Architectuur en is afgetoetst met externe partijen die gelijkaardige afspraken maken.
+                    </p>
+                </section>
+                <section class="vl-region">
+                    <h2 class="vl-title vl-title--h2" id="introduction">
+                        Introductie
+                    </h2>
+                    <div class="vl-typography clearfix">
+                        <p>
+                            Representational State Transfer of kortweg REST is een architecturale stijl voor gedistribueerde hypermedia-systemen zoals ingevoerd en <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">gedefinieerd in 2000 door Roy Fielding</a>, waarbij
+                            de toegang tot en bewerking van objecten in een bepaald domein worden beschreven als standaard web operaties op web resources. REST stoelt sterk op de concepten en principes van het
+                            HTTP-protocol waarvan Roy Fielding mede-auteur is.
+                        </p>
+                        <p>
+                            <a href="https://restfulapi.net/rest-architectural-constraints/">Een set van architecturale constraints</a> (uniforme interface, ontkoppelde client-server interactie, stateless gedrag, cacheable, ...) maken van een webservice een RESTful webservice,
+                            die samen resulteren in een RESTful API. Dat wil zeggen een applicatieprogramma-interface (API) die overeenkomt met de REST-architectuurstijl.
+                        </p>
+                        <p>
+                            Naast RESTful API's bestaan er nog andere manieren om API's te bouwen. In <a href="http://www.jopera.org/files/wilde-www2009-loosely-coupled.pdf">"Why is the Web Loosely Coupled? A Multi-Faceted Metric for Service Design."</a>
+                            worden verschillende aspecten van de meest voorkomende API-types naast elkaar geplaatst. De auteurs tonen aan dat RESTful API's de vorm is die de zwakste koppelingen met de afnemers van de API vereist.
+                            Voor open systemen, zoals het web of data, is dat een belangrijk voordeel omdat hierdoor toegang tot data eenvoudiger is en de gevoeligheid voor wijzigingen in de API beperkter is (dependencies).
+                        </p>
+                        <p>
+                            Ondanks dat de basisprincipes van RESTful API's duidelijk zijn, is er toch heel wat implementatievariatie mogelijk. REST legt namelijk geen enkele regel op met betrekking tot hoe het op een lager niveau
+                            geïmplementeerd moet worden. Deze variatie zorgt ervoor dat afnemers, hoewel geconfronteerd met API's die gelijkaardige principes volgen, toch heel wat specifiek implementatiewerk hebben per API. Met onderstaande
+                            afspraken definiëren we een richtlijn voor RESTful API's die afnemers toelaat om sneller aan de slag te gaan met de API's van Informatie Vlaanderen.
+                        </p>
+                        <p>
+                            RESTful API's die onderstaande richtlijnen implementeren
+                            <ul>
+                                <li>Hebben URL's die entity-centric, dus volgens de resources en niet service gericht zijn.</li>
+                                <li>Gebruiken HTTP als transportprotocol</li>
+                                <li>Gebruiken HTTP-werkwoorden (verbs) als interactiewijze voor het opvragen, wijzigen en aanmaken van resources</li>
+                            </ul>
+                            De afspraken zijn technisch basaal: ze realiseren een uniforme URL-structuur én API design richtlijnen met standaardgedrag, gericht op een minimale implementatiekost. Afspraken voor
+                            zelf-documenterende 'slimme' (hypermedia-driven) API's worden opgenomen in andere standaarden.
+                        </p>
+                    </div>
+                </section>
+                <section class="vl-region">
+                    <h2 class="vl-title vl-title--h2"  id="standards">
+                        Gerelateerde standaarden en richtlijnen
+                    </h2>
+                    <div class="vl-typography clearfix">
+                        <p>
+                            Er zijn heel wat gerelateerde standaarden en richtlijnen die een rol spelen bij de realisatie van een API:
+                        <ul>
+                            <li>
+                                De OSLO-standaarden (<a href="data.vlaanderen.be">data.vlaanderen.be</a>) vormen de basis voor overheidsinformatie. Het is soms verplicht, maar steeds aanbevolen, om de data volgens
+                                deze afspraken te ontsluiten.
+                            </li>
+                            <li>
+                                De URI-standaard voor persistente identificatoren. Deze standaard is een technische standaard die van toepassing is op data die men via persistente identificatoren wil ontsluiten.
+                            </li>
+                            <li>
+                                De OSLO Generieke Hypermedia driven API's, zie <a href="https://github.com/Informatievlaanderen/generieke-hypermedia-api">https://github.com/Informatievlaanderen/generieke-hypermedia-api</a>.<br>
+                                Hypermedia-driven (Hypermedia As The Engine Of Application State, kort HATEOAS) betekent dat de API zelf-documenterend is en geëxploreerd kan worden door machines. Deze standaard vult de afspraken aan voor specifieke topics.
+                            </li>
+                        </ul>
+                        Deze afspraken worden momenteel ook intergouvernementeel afgestemd, om zo een nog groter draagvlak te bekomen. Dit document zal waar nodig en relevant verwijzen naar deze gerelateerde standaarden
+                        en richtlijnen.
+                        </p>
+                    </div>
+                </section>
+                <section class="vl-region">
+                    <h2 class="vl-title vl-title--h2"  id="rest_url">
+                        REST URL vormrichtlijnen
+                    </h2>
+                    <div class="vl-typography clearfix">
+                        <table>
+                            <col width="20">
+                            <col width="80">
+                            <thead>
+                            <tr>
+                                <th>Nummer</th>
+                                <th>Onderwerp</th>
+                                <th>Regel</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>URL</td>
+                                <td>Een REST URL wordt geformatteerd als { protocol }://{ hostname }/api/{ version }/{ resource}/{ identifier } .<br>
+                                    Daarbij is "api" optioneel als het reeds gebruikt wordt als onderdeel van de {hostname}. <b>Het gebruik van hoofdletters in de REST URL's is niet toegestaan</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>URL {hostname}</td>
+                                <td>De concrete hostname afspraken voor Informatie Vlaanderen via een separate guideline, los van de REST API guideline uitwerken.</td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>URL {protocol}</td>
+                                <td>
+                                    <ol type="A">
+                                        <li>Gebruik steeds HTTPS</li>
+                                        <li>Gebruik TLS (Transport Layer Security) v1.2 (SSL & TLS v1.0 zijn deprecated)</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>URL {version}</td>
+                                <td>
+                                    <ol type="A">
+                                        <li>De versie van de API wordt mee in de URL opgenomen. Bijkomend mag deze informatie ook ontsloten worden via andere kanalen zoals headers indien deze exact
+                                        dezelfde versie weergeven als in de URL
+                                        </li>
+                                        <li>
+                                            Een versie wordt genoteerd als kleine letter 'v' met een volgnummer, bijvoorbeeld v1, v2 of v14. Geen verdere leestekens zijn toegestaan.<br>
+                                            Er worden enkel <b>major</b> versies opgenomen. Minor changes kunnen via de header <i>x-version</i> bekend gemaakt worden. De header-waarde volgt de
+                                            semantic versioning regels: v.MAJOR.MINOR.PATCH
+                                        </li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>URL {resource}</td>
+                                <td>
+                                    <ol type="A">
+                                        <li>Resources worden in URI's in het meervoud uitgedrukt.</li>
+                                        <li>Binnen de URI mag <i>resource</i> nooit de waarde 'id', 'doc' of 'ns' aannemen.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td>URL {identifier}</td>
+                                <td>
+                                    <ol type="A">
+                                        <li>
+                                            Een resource identifier dient één enkele (desnoods applicatie geconcateneerde) unieke key te zijn waarmee één resource zal terug te vinden zijn.<br>
+                                            <br>
+                                            De unieke key moet voldoen aan semantische coherentie. Dat wil zeggen dat het niet toegelaten is dat dezelfde unieke key zal gebruikt worden om doorheen
+                                            de tijd naar verschillende objecten te verwijzen. De toestand van dat object waarnaar het verwijst kan wel wijzigen.
+                                        </li>
+                                        <li>
+                                            Gebruik geen URI als resource identifier. Bij voorkeur worden GUID's of long integers aangeraden. Bestaande businessdomein identificatoren zoals ISBN-nummers,
+                                            CAPA key, rijksregisternummers, ... vormen ook een goede keuze.<br>
+                                            <br>
+                                            <b>Motivatie: </b>URI's als resource identifier zijn lang én vereisen het toepassen van URL encoding, wat de leesbaarheid en het gebruik van de API bemoeilijkt.
+                                        </li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7.</td>
+                                <td>URL formatting</td>
+                                <td>
+                                    <ol type="A">
+                                        <li>
+                                            Gebruik geen fragments (#) in de URL. Fragmenten worden gebruikt om in een webpagina te navigeren. Ze worden niet gebruikt in een API URL.
+                                        </li>
+                                        <li>
+                                            Gebruik geen underscores '_' of punten '.' in de URL resource. Gebruik koppeltekens '-' om woorden te scheiden. Dat verhoogt de leesbaarheid.
+                                        </li>
+                                        <li>
+                                            Gebruik geen eind '/' (trailing slash) als betekenisvol onderdeel van de REST URL.
+                                        </li>
+                                        <li>
+                                            Gebruik geen file extensies als betekenisvol onderdeel van de REST URL.<br>
+                                            <br>
+                                            <b>Motivatie: </b> File extensies kunnen best beschouwd worden als een vereenvoudigde vorm van <i>content negotiation</i>. De vorm van de respons is niet
+                                            identificerend, dus is dit ook best geen onderdeel van de resource identificator. Bijvoorbeeld: file extensies zijn van toepassing wanneer gewone HTML pagina's direct
+                                            willen verwijzen naar de data in een bepaalde vorm. "Volwaardige" content negotiation mag niet achterwege gelaten worden enkel en alleen omdat file extensies zouden ondersteund
+                                            worden.
+                                        </li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h5 class="vl-title vl-title--h5">
+                            Motivatie
+                        </h5>
+                            <p>Met deze afspraken willen we maximaal inzetten op leesbaarheid als het compact, uniform beschikbaar maken van operaties op data in een entity-centric visie.</p>
+                            <p>In het datalandschap zijn <b>twee</b> lezingen mogelijk voor een URL: de <i>identificator lezing</i>  en de <i>API lezing</i>. Neem als voorbeeld de URL https://{domein}/a/b/c . Dan is
+                                <ul>
+                                    <li>
+                                        de <b>API lezing</b> voor 'a/b/c' = de c's binnen de context van de b's in de context van de a's. Het gebruik van meervouden volgt logisch uit deze hiërarchische filtering lezing van
+                                        de URL. In deze lezing heeft https://{domein}/a/b/c dus ook een betekenis!
+                                    </li>
+                                    <li>
+                                        de <b>identificator lezing</b> = de naam van dit object is de gehele URL https://{domein}/a/b/c. Het geheel heeft dus betekenis. En het is niet zo omdat '/a/b/c' bestaat dat ook '/a/b'
+                                        betekenis heeft. Daarom worden termen in het enkelvoud gebruikt in deze lezing.
+                                    </li>
+                                </ul>
+                            Bovenstaande afspraken passen de API lezing toe. Indien men identificatoren wenst te ontsluiten op het web, dan verwijzen we naar de URI standaard voor persistente identificatoren.
+                            </p>
+                    </div>
+                </section>
+                <section class="vl-region">
+                    <h2 class="vl-title vl-title--h2" id="api_design">
+                        API design richtlijnen
+                    </h2>
+                    <div class="vl-typography clearfix">
+                        <table>
+                            <col width="20">
+                            <col width="80">
+                            <thead>
+                            <tr>
+                                <th>Nummer</th>
+                                <th>Onderwerp</th>
+                                <th>Regel</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1. </td>
+                                    <td>URL Strategie</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>
+                                                Pas een data georiënteerd design toe. Een resource URL verwijst naar data en niet naar een proces. HTTP-werkwoorden worden gebruikt om het verwerken van data aan te geven.<br>
+                                            </li>
+                                            <li>Een resource URL dat verwijst naar data, gebruikt naamwoorden</li>
+                                            <li>Gebruik een API alias voor veelgebruikte zoekcombinaties<br>
+                                            <br>
+                                                <b>Opmerking: </b> in uitzonderlijke gevallen is het mogelijk dat een data georiënteerde aanpak van de API niet toepasbaar is. Deze vallen dan buiten dit afsprakenkader. Echter, ook in
+                                                deze uitzonderlijke situatie is het aangeraden om zoveel mogelijk van de hier opgesomde afspraken te volgen. Een voorbeeld van zo'n uitzondering is een convertiedienst: convert?from=EURO&to=CNY&amount=100
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2. </td>
+                                    <td>HTTP methods</td>
+                                    <td>
+                                        <ol tpye="A">
+                                            <li>Een resource moet steeds een GET-operatie op niveau van de resource ondersteunen</li>
+                                            <li>Een GET-operatie op de collectie is optioneel</li>
+                                            <li>GET-operaties zijn safe, dat wil zeggen dat ze een resource nooit wijzigen. Bij herhaling van de GET-request wordt dezelfde of de nieuwe toestand van de
+                                            resource teruggegeven.
+                                            </li>
+                                            <li>
+                                                Indien een subresource enkel kan bestaan binnen de context van een andere resource:
+                                                <ul>
+                                                    <li>/resource/{resource_id}/subresource/{subresource_ID}</li>
+                                                    <li>Beperk je tot één niveau van subresources</li>
+                                                </ul>
+                                            </li>
+                                            <li>Indien een subresource ook onafhankelijk van de resource kan bestaan:
+                                                <ul>
+                                                    <li>Geef dan in de output van een GET op de resource, de identifier van de subresource mee.</li>
+                                                </ul>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3. </td>
+                                    <td>Datum & tijd</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>De datum- en tijdsnotatie waarop gestandaardiseerd wordt is het ISO8601-formaat.</li>
+                                            <li>Tijdstippen die deel uitmaken van een respons worden genormaliseerd teruggegeven als UTC met tijdzone informatie.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4. </td>
+                                    <td>Codelijsten</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>Maak gebruik van de ISO 3166-1 2 lettercodes voor landen. Tenzij anders opgelegd door de project specifieke data afspraken
+                                                (Bijvoorbeeld: OSLO <a href="https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/country">https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/country</a> ).</li>
+                                            <li>
+                                                Maak gebruik van de ISO 639-1 2 lettercodes voor talen zoals gestipuleerd in <a href="https://tools.ietf.org/html/rfc5646">https://tools.ietf.org/html/rfc5646</a>.
+                                                Volg voor meer specifieke taalbepalingen zoals nl-BE en fr-BE dezelfde standaard. Tenzij anders opgelegd door de project specifieke data afspraken
+                                                (Bijvoorbeeld OSLO <a href="https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/language">https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/language</a>
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5. </td>
+                                    <td>Payload</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>
+                                                Het standaardformaat voor een respons is JSON. Andere formaten kunnen aangeboden worden via content-negotiatie.
+                                            </li>
+                                            <li>
+                                                Indien een object niet beschikbaar is en verplicht terug te geven is volgens het domein, heeft het de waarde null.
+                                            </li>
+                                            <li>
+                                                Voor attribuutnamen gebruikt men bij voorkeur camelCase.
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6. </td>
+                                    <td>Query Parameters</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>
+                                                Indien ondersteuning wordt geboden voor de functionaliteit om subresources meteen mee in te laden tijdens het ophalen van een resource dan dient daartoe de <i>embed</i>
+                                                standaard query parameter gebruikt te worden bij GET-operaties.
+                                            </li>
+                                            <li>
+                                                Indien ondersteuning wordt geboden om resultaten te sorteren via de querystring, dient hiervoor de standaard queryparameter <i>sort</i> gebruikt te worden.
+                                            </li>
+                                            <li>
+                                                Indien ondersteuning wordt geboden om in de lijst van resultaten slechts bepaalde attributen terug te geven, dienen hiervoor de standaard queryparameters <i>limit</i>
+                                                en <i>offset</i> gebruikt te worden. Indien resultaten-paginatie ondersteuning in de payload wordt aangeboden, gebruik dan hiervoor de OSLO Hypermedia-standaard
+                                                (<a href="https://github.com/Informatievlaanderen/generieke-hypermedia-api">https://github.com/Informatievlaanderen/generieke-hypermedia-api</a>).
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7. </td>
+                                    <td>HTTP-statuscodes</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>Beperk je waar mogelijk tot de subset van volgende 4 tot 10 Status Codes:
+                                            <br>
+                                                <ul>
+                                                    <li>Basis</li>
+                                                        <ul>
+                                                            <li>200 - OK</li>
+                                                            <li>404 - Not Found</li>
+                                                            <li>409 - Conflict</li>
+                                                            <li>500 - Internal Server Error</li>
+                                                        </ul>
+                                                    <li>Uitbreiding</li>
+                                                        <ul>
+                                                            <li>201 - Created</li>
+                                                            <li>304 - Not Modified</li>
+                                                            <li>400 - Bad Request</li>
+                                                            <li>401 - Unauthorized</li>
+                                                            <li>403 - Forbidden</li>
+                                                            <li>410 - Gone</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            Zie <a href="https://tools.ietf.org/html/rfc2616#section-9.5">https://tools.ietf.org/html/rfc2616#section-9.5</a> voor het correcte gebruik van Status Codes.
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8. </td>
+                                    <td>Standaard error payload</td>
+                                    <td>
+                                        Standaard errors zijn het gevolg van technische, systeem of software problemen. Deze worden weergegeven met de overeenkomstige HTTP error code en optioneel een
+                                        standaard error payload.
+                                        <ol type="A">
+                                            <li>
+                                                Een standaard error payload volgt de afspraken <a href="https://tools.ietf.org/html/rfc7807">https://tools.ietf.org/html/rfc7807</a>. In tegenstelling tot deze RFC
+                                                zijn de velden <i>title</i> en <i>status</i> wel verplicht te voorzien.
+                                            </li>
+                                            <textarea class="vl-textarea vl-textarea--block" id="code-1" name="textarea-code-1" value="" cols="80" rows="10" disabled></textarea>
+                                            <br><br>
+                                            Bijvoorbeeld:
+                                            <br>
+                                            <textarea class="vl-textarea vl-textarea--block" id="code-2" name="textarea-code-2" value="" cols="80" rows="10" disabled></textarea>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9. </td>
+                                    <td>Validatie error payload</td>
+                                    <td>
+                                        Validatie errors zijn het gevolg van een business evaluatie van de payload meegegeven in voorafgaande API interactie. Validatie errors verhinderen mogelijks het verzetten
+                                        van interactie met (onderdelen van) de API. Er is geen vaste correlatie tussen HTTP error codes en het bestaan van vanlidatie errors. Het kan dus best voorkomen dat een HTTP respons
+                                        code 200 wordt ontvangen met validatie errors. Bijvoorbeeld in de situatie dat een draft object wordt opgeslagen en dat al de validatie errors hierbij worden teruggegeven. Het is aan de
+                                        designer van de REST API om zo goed mogelijk de HTTP respons code te laten overeenkomen met het bestaan van validatie errors en hiermee de interactie van de API te sturen.
+                                        <ol type="A">
+                                            <li>
+                                                Validatie errors worden meegegeven als een lijst met als naam <i>errors</i>, welke de elementen de basisstructuur van de standaard errors volgen: <i>type</i>, <i>title</i> en <i>detail</i>
+                                                zijn verplicht in dit geval. Eigen uitbreidingen zijn toegestaan.
+                                                <br><br>
+                                                <textarea class="vl-textarea vl-textarea--block" id="code-3" name="textarea-code-2" value="" cols="80" rows="10" disabled></textarea>
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10. </td>
+                                    <td>HTTP headers</td>
+                                    <td>Waar toepasselijk gebruik de standaard HTTP headers om het gebruik van de API te bevorderen. Een concrete lijst met hun gebruik binnen AIV is <a href="https://vlaamseoverheid.atlassian.net/wiki/spaces/EAA/pages/1045628650/HTTP+headers+-+versie+1.1>">hier</a>
+                                    te vinden.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11. </td>
+                                    <td>Documentatie</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>
+                                                Gebruik de OpenAPI Specificatie om RESTful API's te documenteren. We gebruiken de laatste versie van OpenAPI 3.x. Documentatie in de vorm van
+                                                OpenAPI 2.x is  <i>deprecated</i>.
+                                            </li>
+                                            <li>
+                                                Volgende zaken zijn verplicht te beschrijven in de documentatie:
+                                                <ul>
+                                                    <li>Omschrijven van wat de API call doet</li>
+                                                    <li>Beschrijving van de input en output parameters</li>
+                                                    <li>De exhaustieve lijst van respons codes</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12. </td>
+                                    <td>Taal</td>
+                                    <td>Een URL mag zowel in het Nederlands als het Engels. De taalwetgeving is niet van toepassing op API's. Wees consequent in het taalgebruik: minimaliseer het mengen van talen.</td>
+                                </tr>
+                                <tr>
+                                    <td>13. </td>
+                                    <td>API evolutie</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>Ondersteun API evolutie met goed API-versie management. In geval van breaking changes verhoogt de REST URL { version }.</li>
+                                            <li>Voorzie, in kader van operationele backwards compatibility naar API afnemers toe, een transitieperiode bij het uitbrengen van een nieuwe REST URL { version }, waarbij
+                                            de vorige versie gedurende een overeengekomen periode ondersteund blijft.
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>14. </td>
+                                    <td>Content negotiatie</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>Gebruik content negotiatie voor Accept, Accept-Encoding, Accept-Language zoals de HTTP-standaard voorschrijft. Voor de Accept header, gebruik media types zoals geregistreerd
+                                            door IANA (zie: <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">https://www.iana.org/assignments/media-types/media-types.xhtml</a>).
+                                            </li>
+                                            <li>
+                                                Data-gebaseerde content negotiatie wordt beschreven in <a href="https://w3c.github.io/dxwg/conneg-by-ap/">https://w3c.github.io/dxwg/conneg-by-ap/</a>.
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>15.</td>
+                                    <td>CorrelatieID</td>
+                                    <td>Om de verwerking van een API request te kunnen volgen is het zinvol om een correlatieID te initiëren door de proxy verbonden met de externe wereld. Deze correlatieID moet worden doorgegeven
+                                    door elke verwerkende service naar zijn achterliggende API-oproepen. Op deze manier kan de verwerking van 1 externe request over verschillende API's heen gevolgd worden. Deze correlatieID zal worden
+                                    opgeslagen in een HTTP header x-correlation-id.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="vl-region">
+                    <h4 class="vl-title vl-title--h4" id="query_params">
+                        Standaard query parameters.
+                    </h4>
+                    <div class="vl-typography clearfix">
+                        <table>
+                            <thead>
+                            <col width="20">
+                            <col width="80">
+                            <col width="150">
+                            <tr>
+                                <th>Nummer</th>
+                                <th>Functionaliteit</th>
+                                <th>Query parameter (i.h. Engels)</th>
+                                <th>Betekenis</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1. </td>
+                                    <td>Eager loading van subresources</td>
+                                    <td>embed</td>
+                                    <td>Komma-gescheiden lijst van subresource(s) die eager geladen dienen te worden, waarbij ondersteuning voor geneste subresources (bv: thema.categorie) of subresource attributen (bv: thema.categorie.naam),
+                                    wordt geboden.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2. </td>
+                                    <td>Filteren van zoekresultaten</td>
+                                    <td>&lt;attribuut&gt;</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>Attribuut en de waarde ervan waarop gefilterd dient te worden (bv: status=actief). Filteren op meerdere attributen gebeurt door meerdere attributen en hun waarden als query parameters
+                                                op te nemen, als in status=actief,publiek=true;
+                                            </li>
+                                            <li>
+                                                Waar in de queryparameters domeinbenamingen als waarde nodig zijn (zoals bij embedding, filtering op attribuut, zoeken, scope framing) zullen dit normaal gezien de benamingen zijn die voorkomen
+                                                in de payload.
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3. </td>
+                                    <td>Sorteren van zoekresultaten</td>
+                                    <td>sort</td>
+                                    <td>Komma-gescheiden lijst van attributen waarop gesorteerd wordt, waarbij de volgorde in de lijst bepalend is voor de sorteervolgorde en waarbij tevens naast ondersteuning voor oplopend ook functionaliteit
+                                    voor aflopend sorteren, door middel van <code>:desc</code> toe te voegen aan het attribuut (<code>:asc</code> is default), wordt geboden. Voorbeeld: <code>sort=-creatieDatum:desc,naam</code></td>
+                                </tr>
+                                <tr>
+                                    <td>4. </td>
+                                    <td>Full-text zoeken</td>
+                                    <td>q</td>
+                                    <td>Vrij zoekveld</td>
+                                </tr>
+                                <tr>
+                                    <td>5. </td>
+                                    <td>Beperken van geretourneerde attributen</td>
+                                    <td>field</td>
+                                    <td>Komma-gescheiden lijst van attributen die gewenst worden in de resultatenlijst.</td>
+                                </tr>
+                                <tr>
+                                    <td>6. </td>
+                                    <td>Paginatie</td>
+                                    <td>limit</td>
+                                    <td>Aantal resultaten op 1 resultatenpagina</td>
+                                </tr>
+                                <tr>
+                                    <td>7. </td>
+                                    <td>Paginatie</td>
+                                    <td>offset</td>
+                                    <td>Volgnummer van het eerstvolgend resultaat dat als eerste wordt verwacht (startend bij 0). Voorbeeld van 10 resultaten per pagina opvragen waarbij pagina 1 wordt opgevraagd met <code>limit=10,offset=0</code>
+                                    en de tweede pagina met  <code>limit=10;offset=10</code>, dus resultaten teruggeeft beginnend bij het 11de resultaat.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="vl-region">
+                    <h2 class="vl-title vl-title--h2" id="sem_interop_guidelines">
+                        Semantische interoperabiliteit richtlijnen
+                    </h2>
+                    <div class="vl-typography clearfix">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Nummer.</th>
+                                <th>Onderwerp</th>
+                                <th>Regel</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1. </td>
+                                    <td>OSLO²</td>
+                                    <td>
+                                        <ol type="A">
+                                            <li>
+                                                Het informatiemodel en de gebruikte nomenclatuur dient in lijn te zijn met de OSLO² semantiek voor wat betreft de OSLO²-governed entiteiten. Meer informatie hieromtrent is te vinden via
+                                                <a href="https://data.vlaanderen.be/">https://data.vlaanderen.be/</a> of <a href="mailto:oslo@kb.vlaanderen.be">oslo@kb.vlaanderen.be</a>
+                                            </li>
+                                            <li>
+                                                Het is verplicht om @id (indien de URI beschikbaar is) en @context verwijzing op te nemen voor OSLO²-governed entiteiten in de JSON payload van REST API's, zelf in services die al live staan (*)
+                                                <br>
+                                                <br>
+                                                <i style="font-size: 75%;">(*) Indien, voor services die al live staan, het om technische redenen niet mogelijk is om de OSLO² semantiek rechtstreeks over te nemen in de JSON payload zal deze voorzien worden in een eigen @context
+                                                file die de mapping naar de OSLO² semantiek vastlegt.
+                                                </i>
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div class="vl-col--4-12">
+                <nav class="vl-side-navigation vl-region js-vl-side-navigation js-vl-sticky js-vl-scrollspy" data-vl-side-navigation data-vl-side-navigation-scrollable data-vl-scrollspy data-vl-scrollspy-mobile="Componenten" data-vl-sticky data-vl-sticky-offset-top="25" aria-label="inhoudsopgave">
+                    <h5 class="vl-side-navigation__title">Inhoud</h5>
+                    <div class="vl-side-navigation__content">
+                        <ul class="vl-side-navigation__group">
+                            <li class="vl-side-navigation__item vl-side-navigation__item--parent">
+                                <a class="vl-side-navigation__toggle" href="#introduction" data-vl-child="content-1">
+                                    Introductie
+                                </a>
+                            </li>
+                            <li class="vl-side-navigation__item vl-side-navigation__item--parent">
+                                <a class="vl-side-navigation__toggle" href="#standards" data-vl-child="content-2">
+                                    Gerelateerde standaarden en richtlijnen
+                                </a>
+                            </li>
+                            <li class="vl-side-navigation__item vl-side-navigation__item--parent">
+                                <a class="vl-side-navigation__toggle" href="#rest_url" data-vl-child="content-3">
+                                    REST URL vormrichtlijnen
+                                </a>
+                            </li>
+                            <li class="vl-side-navigation__item vl-side-navigation__item--parent">
+                                <a class="vl-side-navigation__toggle" href="#api_design" data-vl-child="api_design_guide">
+                                    API design richtlijnen
+                                </a>
+                            </li>
+                            <li class="vl-side-navigation__item vl-side-navigation__item--parent">
+                                <a class="vl-side-navigation__toggle" href="#query_params" data-vl-child="">
+                                    Standaard query parameters
+                                </a>
+                            </li>
+                            <li class="vl-side-navigation__item vl-side-navigation__item--parent">
+                                <a class="vl-side-navigation__toggle" href="#sem_interop_guidelines" data-vl-child="">
+                                    Semantische interoperabliteit richtlijnen
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div id="vlaanderen-footer">
+            <!-- insert your Vlaanderen-footer-code here -->
+            <script src="//widgets.vlaanderen.be/widget/live/d6d44414e7c242f396ab6da8f8da5198" type="text/javascript"></script>
+            <!-- End global footer-->
+        </div>
+    </body>
+</html>

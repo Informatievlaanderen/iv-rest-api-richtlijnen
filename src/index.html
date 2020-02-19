@@ -129,19 +129,19 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
+                            <tr id="vorm.algemeen">
                                 <td>1.</td>
                                 <td>URL</td>
                                 <td>Een REST URL wordt geformatteerd als { protocol }://{ hostname }/api/{ version }/{ resource}/{ identifier } .<br>
                                     Daarbij is "api" optioneel als het reeds gebruikt wordt als onderdeel van de {hostname}. <b>Het gebruik van hoofdletters in de REST URL's is niet toegestaan</b>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="vorm.hostname">
                                 <td>2.</td>
                                 <td>URL {hostname}</td>
                                 <td>De concrete hostname afspraken voor Informatie Vlaanderen via een separate guideline, los van de REST API guideline uitwerken.</td>
                             </tr>
-                            <tr>
+                            <tr id="vorm.protocol">
                                 <td>3.</td>
                                 <td>URL {protocol}</td>
                                 <td>
@@ -151,7 +151,7 @@
                                     </ol>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="vorm.version">
                                 <td>4.</td>
                                 <td>URL {version}</td>
                                 <td>
@@ -167,7 +167,7 @@
                                     </ol>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="vorm.resource">
                                 <td>5.</td>
                                 <td>URL {resource}</td>
                                 <td>
@@ -177,7 +177,7 @@
                                     </ol>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="vorm.identifier">
                                 <td>6.</td>
                                 <td>URL {identifier}</td>
                                 <td>
@@ -197,7 +197,7 @@
                                     </ol>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="vorm.formatting">
                                 <td>7.</td>
                                 <td>URL formatting</td>
                                 <td>
@@ -259,7 +259,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr id="Design.urlStrategie">
                                     <td>1. </td>
                                     <td>URL Strategie</td>
                                     <td>
@@ -276,7 +276,7 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.httpMethods">
                                     <td>2. </td>
                                     <td>HTTP methods</td>
                                     <td>
@@ -300,7 +300,7 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.datum">
                                     <td>3. </td>
                                     <td>Datum & tijd</td>
                                     <td>
@@ -310,7 +310,7 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.codelijsten">
                                     <td>4. </td>
                                     <td>Codelijsten</td>
                                     <td>
@@ -325,7 +325,7 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.payload">
                                     <td>5. </td>
                                     <td>Payload</td>
                                     <td>
@@ -342,7 +342,7 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.queryParameters">
                                     <td>6. </td>
                                     <td>Query Parameters</td>
                                     <td>
@@ -362,7 +362,7 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.httpStatuscodes">
                                     <td>7. </td>
                                     <td>HTTP-statuscodes</td>
                                     <td>
@@ -393,7 +393,7 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.errorPayload.standaard">
                                     <td>8. </td>
                                     <td>Standaard error payload</td>
                                     <td>
@@ -412,7 +412,7 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.errorPayload.validatie">
                                     <td>9. </td>
                                     <td>Validatie error payload</td>
                                     <td>
@@ -430,14 +430,14 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.httpHeaders">
                                     <td>10. </td>
                                     <td>HTTP headers</td>
                                     <td>Waar toepasselijk gebruik de standaard HTTP headers om het gebruik van de API te bevorderen. Een concrete lijst met hun gebruik binnen AIV is <a href="https://vlaamseoverheid.atlassian.net/wiki/spaces/EAA/pages/1045628650/HTTP+headers+-+versie+1.1>">hier</a>
                                     te vinden.
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.documentatie">
                                     <td>11. </td>
                                     <td>Documentatie</td>
                                     <td>
@@ -457,12 +457,12 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.taal">
                                     <td>12. </td>
                                     <td>Taal</td>
                                     <td>Een URL mag zowel in het Nederlands als het Engels. De taalwetgeving is niet van toepassing op API's. Wees consequent in het taalgebruik: minimaliseer het mengen van talen.</td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.apiEvolutie">
                                     <td>13. </td>
                                     <td>API evolutie</td>
                                     <td>
@@ -474,7 +474,7 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.contentNegotiatie">
                                     <td>14. </td>
                                     <td>Content negotiatie</td>
                                     <td>
@@ -488,7 +488,7 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="Design.correlatieID">
                                     <td>15.</td>
                                     <td>CorrelatieID</td>
                                     <td>Om de verwerking van een API request te kunnen volgen is het zinvol om een correlatieID te initiëren door de proxy verbonden met de externe wereld. Deze correlatieID moet worden doorgegeven
@@ -518,7 +518,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr id="QueryPm.eagerLoading">
                                     <td>1. </td>
                                     <td>Eager loading van subresources</td>
                                     <td>embed</td>
@@ -526,7 +526,7 @@
                                     wordt geboden.
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="QueryPm.filter">
                                     <td>2. </td>
                                     <td>Filteren van zoekresultaten</td>
                                     <td>&lt;attribuut&gt;</td>
@@ -542,32 +542,32 @@
                                         </ol>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="QueryPm.sorteren">
                                     <td>3. </td>
                                     <td>Sorteren van zoekresultaten</td>
                                     <td>sort</td>
                                     <td>Komma-gescheiden lijst van attributen waarop gesorteerd wordt, waarbij de volgorde in de lijst bepalend is voor de sorteervolgorde en waarbij tevens naast ondersteuning voor oplopend ook functionaliteit
                                     voor aflopend sorteren, door middel van <code>:desc</code> toe te voegen aan het attribuut (<code>:asc</code> is default), wordt geboden. Voorbeeld: <code>sort=-creatieDatum:desc,naam</code></td>
                                 </tr>
-                                <tr>
+                                <tr id="QueryPm.fts">
                                     <td>4. </td>
                                     <td>Full-text zoeken</td>
                                     <td>q</td>
                                     <td>Vrij zoekveld</td>
                                 </tr>
-                                <tr>
+                                <tr id="QueryPm.beperkenGertourneerdeAttributen">
                                     <td>5. </td>
                                     <td>Beperken van geretourneerde attributen</td>
                                     <td>field</td>
                                     <td>Komma-gescheiden lijst van attributen die gewenst worden in de resultatenlijst.</td>
                                 </tr>
-                                <tr>
+                                <tr id="QueryPm.paginatie.limit">
                                     <td>6. </td>
                                     <td>Paginatie</td>
                                     <td>limit</td>
                                     <td>Aantal resultaten op 1 resultatenpagina</td>
                                 </tr>
-                                <tr>
+                                <tr id="QueryPm.paginatie.offset">
                                     <td>7. </td>
                                     <td>Paginatie</td>
                                     <td>offset</td>
@@ -592,7 +592,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr id="richtlijnen.oslo">
                                     <td>1. </td>
                                     <td>OSLO²</td>
                                     <td>

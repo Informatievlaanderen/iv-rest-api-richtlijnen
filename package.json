@@ -17,7 +17,7 @@
     "@govflanders/vl-ui-textarea": "^3.10.8",
     "@govflanders/vl-ui-titles": "^3.10.8",
     "@govflanders/vl-ui-typography": "^3.10.8",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "node-sass": "^4.13.1",
     "path": "~0.12.7"
   }

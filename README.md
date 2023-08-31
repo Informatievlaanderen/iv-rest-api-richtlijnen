@@ -58,7 +58,7 @@ The plugins directory contains JavaScript plugins that you want to run before in
 More information about the usage of this directory in [the documentation](https://nuxt.com/docs/guide/directory-structure/plugins#plugins-directory).
 
 ### `css`
-The css directory contains your custom imported css or Sass files. We use this to import the custom styling from the `@govflanders/vl-ui-design-system-style` library. 
+The css directory contains your custom imported css or Sass files. We use this to import the custom styling from the `@govflanders/vl-ui-design-system-style` library. you should create a file in `css/` and add its path to css in `nuxt.config.ts`.
 
 
 ## Special files

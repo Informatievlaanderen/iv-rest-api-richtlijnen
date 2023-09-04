@@ -66,6 +66,17 @@ The css directory contains your custom imported css or Sass files. We use this t
 ### .npmrc
 This file serves as a config file, specifically for npm. We use this file to store our required tokens for the private npm repositoires such as `@govflanders/vl-ui-design-system-style` and `@govflanders/vl-ui-design-system-vue3`. More information about this file can be found in [the documentation](https://docs.npmjs.com/cli/v9/configuring-npm/npmrc).
 
+In this file, we mention a secret authentication token. 
+
+```
+registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}
+```
+
+This is a secret token that needs to exist in your own session. If you try installing the dependencies without this token present, it will not work. You can set a token using the command below, where `NPM_AUTH_TOKEN` contains the actual token. For more information, please read this [stackoverflow issue](https://stackoverflow.com/questions/53099434/using-auth-tokens-in-npmrc/61666885#61666885).
+
+```bash
+export NPM_TOKEN="${NPM_AUTH_TOKEN}"
+```
 ### .env
 This file serves as a secret file to contain all our API-keys, tokens,... that we don't want to expose to the outside world. This file should **never** be added inside the repository for security purposes. In the `.env.example` file, you can see which tokens and API-keys are required to run this project. Place the actual values inside the `.env` folder on your local device. 
 

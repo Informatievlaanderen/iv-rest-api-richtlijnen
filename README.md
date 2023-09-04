@@ -1,5 +1,15 @@
 # OSLO-frontend-template
 
+This repository should be used as the starting point for every frontend-related project that gets build for the government of Flanders. This project is built using [Nuxt 3.x](https://nuxt.com/) and [Vue 3.x](https://vuejs.org/). Ever since these newer versions of these libraries got released, the government of Flanders also released a third version of their webcomponents which works with these newer versions. The needed configuration has already been set up, so that you can start using these components immediately. The libraries are
+
+```json
+@govflanders/vl-ui-design-system-style
+@govflanders/vl-ui-design-system-vue3
+```
+
+Documentation about these webcomponents can be found in [Storybook page](https://642e92e0cda6c627a0601f07-bpunzfpjnm.chromatic.com/?path=/docs/about-getting-started--docs). If the link does not work anymore, feel free to contact someone from the development team via their Slack channel `#design-system-vue3-alpha`.
+
+
 ## Build Setup
 
 ```bash

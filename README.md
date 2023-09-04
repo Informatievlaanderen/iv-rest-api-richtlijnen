@@ -80,6 +80,16 @@ export NPM_AUTH_TOKEN="${NPM_AUTH_TOKEN}"
 ### .env
 This file serves as a secret file to contain all our API-keys, tokens,... that we don't want to expose to the outside world. This file should **never** be added inside the repository for security purposes. In the `.env.example` file, you can see which tokens and API-keys are required to run this project. Place the actual values inside the `.env` folder on your local device. 
 
+#### passing env variables to the frontend
+
+Since Vue `3.x`, nuxt uses [Vite](https://vitejs.dev/guide/why.html) as its preferred bundler over [Webpack](https://webpack.js.org/). This means that environment variables are passed in a different manner from the backend to the frontend. You can access the environment variables by using
+```js
+import.meta.env.VITE_ENVIRONMENT
+```
+
+> Only variables using the `VITE_` prefix are passed to the frontend. **Never** pass secret variables, such as API-tokens to the frontend as these will be up for grabs
+
+
 ## Developer tools
 
 ### Prettier

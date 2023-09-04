@@ -75,7 +75,7 @@ registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}
 This is a secret token that needs to exist in your own session. If you try installing the dependencies without this token present, it will not work. You can set a token using the command below, where `NPM_AUTH_TOKEN` contains the actual token. For more information, please read this [stackoverflow issue](https://stackoverflow.com/questions/53099434/using-auth-tokens-in-npmrc/61666885#61666885).
 
 ```bash
-export NPM_TOKEN="${NPM_AUTH_TOKEN}"
+export NPM_AUTH_TOKEN="${NPM_AUTH_TOKEN}"
 ```
 ### .env
 This file serves as a secret file to contain all our API-keys, tokens,... that we don't want to expose to the outside world. This file should **never** be added inside the repository for security purposes. In the `.env.example` file, you can see which tokens and API-keys are required to run this project. Place the actual values inside the `.env` folder on your local device. 

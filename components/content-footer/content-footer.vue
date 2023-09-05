@@ -20,7 +20,7 @@ export default {
       default:
         footerScript.setAttribute(
           'src',
-          '<https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/widget/c0df3610-36b9-4113-a487-05dfed92c317/embed',
+          'https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/widget/c0df3610-36b9-4113-a487-05dfed92c317/embed',
         )
     }
     document.head.appendChild(footerScript)

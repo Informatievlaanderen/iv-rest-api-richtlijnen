@@ -2,7 +2,7 @@
   <vl-content-footer>
     <vl-layout>
       <vl-grid mod-stacked>
-        <vl-column width="12" width-s="12">
+        <vl-column width="4" width-s="12">
           <vl-link-list mod-small>
             <li><a href="#">Subsidies</a></li>
             <li><a href="#">Bedrijfsvoering</a></li>
@@ -10,7 +10,7 @@
             <li><a href="#">Voorlichting &amp; info</a></li>
           </vl-link-list>
         </vl-column>
-        <vl-column width="12" width-s="12">
+        <vl-column width="4" width-s="12">
           <vl-link-list mod-small>
             <li><a href="#">Visserij</a></li>
             <li><a href="#">Dier</a></li>
@@ -18,15 +18,12 @@
             <li><a href="#">Bio</a></li>
           </vl-link-list>
         </vl-column>
-        <vl-column width="12" width-s="12">
+        <vl-column width="4" width-s="12">
           <vl-link-list mod-small>
             <li><a href="#">Home</a></li>
             <li><a href="#">Nieuwsbrief</a></li>
             <li><a href="#">Publicaties</a></li>
           </vl-link-list>
-        </vl-column>
-        <vl-column width="12" width-s="12">
-          <img src="http://placehold.it/400x200" alt="" />
         </vl-column>
       </vl-grid>
     </vl-layout>

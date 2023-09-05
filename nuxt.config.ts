@@ -7,6 +7,10 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'nl',
       },
+      script: [
+        { src: 'https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-polyfill/dist/index.js', },
+        { src: 'https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-client/dist/index.js' },
+      ],
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -43,8 +47,13 @@ export default defineNuxtConfig({
   },
   // Global CSS: https://nuxt.com/docs/api/configuration/nuxt-config#css
   css: ['~/css/styles.scss'],
+  build: {
+    transpile: ['@govflanders/vl-widget-polyfill']
+  },
   // Plugins to run before rendering page: https://nuxt.com/docs/api/configuration/nuxt-config#plugins-1
-  plugins: [{ src: '~/plugins/webcomponents.js', mode: 'client' }],
+  plugins: [
+    { src: '~/plugins/webcomponents.js', mode: 'client' },
+  ],
   // Modules: https://nuxt.com/docs/api/configuration/nuxt-config#modules-1
   modules: [
     // https://content.nuxtjs.org/

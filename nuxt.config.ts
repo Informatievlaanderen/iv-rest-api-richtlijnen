@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
   app: {
@@ -44,6 +45,10 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+  // Alias declaration for easier access to components directory
+  alias: {
+    "@components": fileURLToPath(new URL('./components', import.meta.url)),
   },
   // Global CSS: https://nuxt.com/docs/api/configuration/nuxt-config#css
   css: ['~/css/styles.scss'],

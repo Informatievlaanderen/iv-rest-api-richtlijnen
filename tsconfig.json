@@ -16,6 +16,7 @@
       "@/*": ["./*"]
     },
     "types": [
+      "jest",
       "node",
       "@nuxt/types",
       "@nuxt/typescript-build",

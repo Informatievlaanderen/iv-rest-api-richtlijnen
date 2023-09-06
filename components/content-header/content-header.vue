@@ -27,6 +27,7 @@
 
 <script>
 export default {
+  name: 'contentHeader',
   mounted() {
     const headerScript = document.createElement('script')
     switch (import.meta.env.VITE_ENVIRONMENT) {

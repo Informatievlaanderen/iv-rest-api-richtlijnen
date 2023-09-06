@@ -6,4 +6,8 @@ describe("Introduction component", () => {
     test('Does the wrapper exist', () => {
         expect(wrapper.exists()).toBe(true)
     })
+
+    test('Does the HTML content render', () => {
+        expect(wrapper.text()).toContain('webcomponenten 3.0')
+    })
 })

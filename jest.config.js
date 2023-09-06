@@ -7,8 +7,8 @@ module.exports = {
     // Collect coverage for all the test scenarios
     collectCoverage: true,
     collectCoverageFrom: [
-        "<rootDir>/components/*.vue",
-        "<rootDir>/pages/*.vue"
+        "<rootDir>/components/**/*.vue",
+        "<rootDir>/pages/**/*.vue"
     ],
     moduleNameMapper: {
         "^@/(.*)$": "<rootDir>/$1",

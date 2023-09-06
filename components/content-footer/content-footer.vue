@@ -32,6 +32,7 @@
 
 <script>
 export default {
+  name: 'contentFooter',
   mounted() {
     const footerScript = document.createElement('script')
     switch (import.meta.env.VITE_ENVIRONMENT) {

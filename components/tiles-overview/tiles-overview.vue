@@ -33,29 +33,29 @@ export default {
   name: 'tilesOverview',
   props: {
     navigationItems: {
-      type: Array<NavigationMenu>,
+      type: Array<NavigationMenu> || null,
       default: [
         {
           title: 'Waarom OSLO?',
           links: [
-            // {
-            //   title: 'Over OSLO',
-            //   href: '/over-oslo',
-            //   description:
-            //     'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            // },
-            // {
-            //   title: 'OSLO in de praktijk',
-            //   href: '/oslo-in-de-praktijk',
-            //   description:
-            //     'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            // },
-            // {
-            //   title: 'OSLO in de praktijk',
-            //   href: '/oslo-in-de-praktijk',
-            //   description:
-            //     'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            // },
+            {
+              title: 'Over OSLO',
+              href: '/over-oslo',
+              description:
+                'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            },
+            {
+              title: 'OSLO in de praktijk',
+              href: '/oslo-in-de-praktijk',
+              description:
+                'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            },
+            {
+              title: 'OSLO in de praktijk',
+              href: '/oslo-in-de-praktijk',
+              description:
+                'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            },
           ],
         },
       ],

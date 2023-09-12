@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url'
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Frontend project',
+      title: 'data.vlaanderen.be',
       htmlAttrs: {
         lang: 'nl',
       },
@@ -49,6 +49,7 @@ export default defineNuxtConfig({
   // Alias declaration for easier access to components directory
   alias: {
     "@components": fileURLToPath(new URL('./components', import.meta.url)),
+    "@types": fileURLToPath(new URL('./types', import.meta.url)),
   },
   // Global CSS: https://nuxt.com/docs/api/configuration/nuxt-config#css
   css: ['~/css/styles.scss'],
@@ -64,4 +65,10 @@ export default defineNuxtConfig({
     // https://content.nuxtjs.org/
     '@nuxt/content',
   ],
+  content: {
+    documentDriven: true,
+    highlight: {
+      theme: 'light-plus'
+    }
+  }
 })

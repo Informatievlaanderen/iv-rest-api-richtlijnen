@@ -4,24 +4,9 @@
   </vl-doormat>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'tile',
-  props: {
-    title: {
-      type: String,
-      required: false,
-    },
-    href: {
-      type: String,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-  },
-}
+<script setup lang="ts" name="tile">
+import { NavigationLink } from '~/types/navigationLink'
+defineProps<NavigationLink>()
 </script>
 
 <style scoped lang="scss">

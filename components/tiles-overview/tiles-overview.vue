@@ -2,24 +2,22 @@
   <vl-region>
     <vl-layout>
       <vl-grid mod-stacked>
-        <template v-for="navigationItem in navigationItems">
+        <template v-for="navigationItem in tiles">
           <vl-column width="12" width-s="12">
             <vl-infoblock mod-type="news" :title="navigationItem?.title" />
           </vl-column>
-          <vl-grid class="container">
-            <vl-column
-              v-for="link in navigationItem?.links"
-              width="4"
-              width-m="6"
-              width-s="12"
-            >
-              <tile
-                :href="link?.href"
-                :description="link?.description"
-                :title="link?.title"
-              />
-            </vl-column>
-          </vl-grid>
+          <vl-column
+            v-for="link in navigationItem?.links"
+            width="4"
+            width-m="6"
+            width-s="12"
+          >
+            <tile
+              :href="link?.href"
+              :description="link?.description"
+              :title="link?.title"
+            />
+          </vl-column>
         </template>
       </vl-grid>
     </vl-layout>
@@ -32,7 +30,7 @@ import { NavigationMenu } from '~/types/navigationMenu'
 export default {
   name: 'tilesOverview',
   props: {
-    navigationItems: {
+    tiles: {
       type: Array<NavigationMenu> || null,
       default: [
         {
@@ -51,7 +49,7 @@ export default {
                 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
             },
             {
-              title: 'OSLO in de praktijk',
+              title: 'OSLO',
               href: '/oslo-in-de-praktijk',
               description:
                 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
@@ -63,9 +61,3 @@ export default {
   },
 }
 </script>
-
-<style scoped lang="scss">
-.container {
-  width: 100%;
-}
-</style>

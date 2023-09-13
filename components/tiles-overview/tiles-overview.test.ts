@@ -12,6 +12,7 @@ describe("Tiles overview component", () => {
         expect(wrapper.find('vl-grid').exists()).toBe(true)
         expect(wrapper.find('vl-infoblock').exists()).toBe(true)
         expect(wrapper.find('vl-column').exists()).toBe(true)
+        expect(wrapper.find('vl-column').attributes('width-s')).toContain('12')
     })
 
     it('Component has at least one custom tile component', () => {

@@ -54,7 +54,7 @@ export default defineNuxtConfig({
   // Global CSS: https://nuxt.com/docs/api/configuration/nuxt-config#css
   css: ['~/css/styles.scss'],
   build: {
-    transpile: ['@govflanders/vl-widget-polyfill']
+    transpile: ['@govflanders/vl-widget-polyfill'],
   },
   // Plugins to run before rendering page: https://nuxt.com/docs/api/configuration/nuxt-config#plugins-1
   plugins: [

@@ -18,6 +18,7 @@ navigationMenu:
           {
             title: 'Applicatieprofielen',
             description: 'Ga aan de slag met onze applicatieprofielen',
+            href: 'https://data.vlaanderen.be/ns/#Applicatieprofielen',
           },
         ],
     },

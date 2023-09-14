@@ -1,6 +1,5 @@
 <template>
   <vl-region>
-    <vl-layout>
       <vl-grid mod-stacked>
         <template v-for="navigationItem in tiles">
           <vl-column width="12" width-s="12">
@@ -20,7 +19,6 @@
           </vl-column>
         </template>
       </vl-grid>
-    </vl-layout>
   </vl-region>
 </template>
 

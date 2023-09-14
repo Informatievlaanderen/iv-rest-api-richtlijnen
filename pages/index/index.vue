@@ -1,11 +1,18 @@
 <template>
   <vl-region>
     <content-header />
-    <introduction />
-    <tilesOverview :tiles="data?.navigation" />
-    <infoTilesOverview :tiles="data?.datasets" />
-    <accordion :items="data?.faq" />
-    <content-footer />
+    <vl-layout>
+      <tilesOverview :tiles="data?.navigation" />
+      <typography> 
+        <h2>Datasets</h2>
+      </typography>
+      <infoTilesOverview :tiles="data?.datasets" />
+      <typography> 
+        <h2>FAQ</h2>
+      </typography>
+      <accordion :items="data?.faq" />
+      <content-footer />
+    </vl-layout>
   </vl-region>
 </template>
 

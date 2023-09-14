@@ -31,7 +31,7 @@ export default {
   name: 'tilesOverview',
   props: {
     tiles: {
-      type: Array<NavigationMenu> || null,
+      type: Array<NavigationMenu>,
       default: [
         {
           title: 'Waarom OSLO?',

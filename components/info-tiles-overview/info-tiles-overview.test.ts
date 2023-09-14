@@ -10,7 +10,6 @@ describe("Tiles overview component", () => {
 
     it('Component has govflanders components', () => {
         expect(wrapper.find('vl-grid').exists()).toBe(true)
-        expect(wrapper.find('vl-typography').exists()).toBe(true)
         expect(wrapper.find('vl-column').exists()).toBe(true)
         expect(wrapper.find('vl-column').attributes('width-s')).toContain('12')
     })

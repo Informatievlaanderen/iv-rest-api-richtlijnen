@@ -1,18 +1,16 @@
 <template>
   <vl-region>
-    <vl-layout>
-      <vl-grid mod-stacked>
-        <vl-column v-for="tile in tiles" width="6" width-s="12">
-          <info-tile
-            :image="tile?.image"
-            :href="tile?.href"
-            :title="tile?.title"
-            :subtitle="tile?.subtitle"
-            :content="tile?.content"
-          />
-        </vl-column>
-      </vl-grid>
-    </vl-layout>
+    <vl-grid mod-stacked>
+      <vl-column v-for="tile in tiles" width="6" width-s="12">
+        <info-tile
+          :image="tile?.image"
+          :href="tile?.href"
+          :title="tile?.title"
+          :subtitle="tile?.subtitle"
+          :content="tile?.content"
+        />
+      </vl-column>
+    </vl-grid>
   </vl-region>
 </template>
 

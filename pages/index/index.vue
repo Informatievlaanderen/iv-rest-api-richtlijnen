@@ -11,8 +11,8 @@
         <h2>FAQ</h2>
       </typography>
       <accordion :items="data?.faq" />
-      <content-footer />
     </vl-layout>
+    <content-footer />
   </vl-region>
 </template>
 

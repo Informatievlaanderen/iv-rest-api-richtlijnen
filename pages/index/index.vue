@@ -21,10 +21,13 @@ const { data } = await useLazyAsyncData('data', async () => {
     queryContent('/faq').find(),
   ])
 
+  console.log(navData)
+  console.log(navData)
+
   return {
-    navigation: navData[0].navigationMenu,
-    datasets: datasetsData[0].datasets,
-    faq: faqData[0].FAQ,
+    navigation: navData[0]?.navigation,
+    datasets: datasetsData[0]?.datasets,
+    faq: faqData[0]?.faq,
   }
 })
 </script>

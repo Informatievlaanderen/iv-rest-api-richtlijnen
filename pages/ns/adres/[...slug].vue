@@ -108,9 +108,9 @@
 
 <script setup lang="ts">
 import { Configuration } from '~/types/configuration'
-// Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
 const { path } = useRoute()
 
+// Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
 const { data } = await useAsyncData('data', async () => {
   const [nsData] = await Promise.all([
     queryContent<Configuration>(`${path}/configuration`).find(),

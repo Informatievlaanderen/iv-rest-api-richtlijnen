@@ -1,7 +1,7 @@
 <template>
   <vl-region>
     <vl-accordion-list>
-      <vl-grid mod-stacked-small>
+      <vl-grid mod-stacked>
         <vl-column width="6" width-m="12" v-for="item in items">
           <vl-accordion :title="item?.title" :id="item?.id" :modAltBg="true">
             <vl-grid>

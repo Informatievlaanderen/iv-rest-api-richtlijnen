@@ -1,6 +1,6 @@
 
 export interface Accordion {
-    id: String,
+    id: string,
     title: string,
     subtitle: string,
     content: string,

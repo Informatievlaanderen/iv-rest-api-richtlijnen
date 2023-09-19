@@ -3,13 +3,9 @@
     <content-header />
     <vl-layout>
       <tilesOverview :tiles="data?.navigation" />
-      <typography> 
-        <h2>Datasets</h2>
-      </typography>
+      <vl-title tag-name="h2">Datasets</vl-title>
       <infoTilesOverview :tiles="data?.datasets" />
-      <typography> 
-        <h2>FAQ</h2>
-      </typography>
+      <vl-title tag-name="h2">FAQ</vl-title>
       <accordion :items="data?.faq" />
     </vl-layout>
     <content-footer />

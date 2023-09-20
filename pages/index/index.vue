@@ -3,13 +3,9 @@
     <content-header />
     <vl-layout>
       <tilesOverview :tiles="data?.navigation" />
-      <typography> 
-        <h2>Datasets</h2>
-      </typography>
+      <vl-title tag-name="h2">Datasets</vl-title>
       <infoTilesOverview :tiles="data?.datasets" />
-      <typography> 
-        <h2>FAQ</h2>
-      </typography>
+      <vl-title tag-name="h2">FAQ</vl-title>
       <accordion :items="data?.faq" />
     </vl-layout>
     <content-footer />
@@ -18,7 +14,7 @@
 
 <script setup lang="ts">
 // Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
-const { data } = await useLazyAsyncData('data', async () => {
+const { data } = await useAsyncData('data', async () => {
   const [navData, datasetsData, faqData] = await Promise.all([
     queryContent('/navigation-menu').find(),
     queryContent('/datasets').find(),
@@ -26,9 +22,9 @@ const { data } = await useLazyAsyncData('data', async () => {
   ])
 
   return {
-    navigation: navData[0].navigationMenu,
-    datasets: datasetsData[0].datasets,
-    faq: faqData[0].FAQ,
+    navigation: navData[0]?.navigation,
+    datasets: datasetsData[0]?.datasets,
+    faq: faqData[0]?.faq,
   }
 })
 </script>

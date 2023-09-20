@@ -1,61 +1,33 @@
 <template>
   <vl-region>
-      <vl-grid mod-stacked>
-        <template v-for="navigationItem in tiles">
-          <vl-column width="12" width-s="12">
-            <vl-infoblock mod-type="news" :title="navigationItem?.title" />
-          </vl-column>
-          <vl-column
-            v-for="link in navigationItem?.links"
-            width="4"
-            width-m="6"
-            width-s="12"
-          >
-            <tile
-              :href="link?.href"
-              :description="link?.description"
-              :title="link?.title"
-            />
-          </vl-column>
-        </template>
-      </vl-grid>
+    <vl-grid mod-stacked>
+      <template v-for="navigationItem in tiles">
+        <vl-column width="12" width-s="12">
+          <vl-infoblock mod-type="news" :title="navigationItem?.title" />
+        </vl-column>
+        <vl-column
+          v-for="link in navigationItem?.links"
+          width="4"
+          width-m="6"
+          width-s="12"
+        >
+          <tile
+            :href="link?.href"
+            :description="link?.description"
+            :title="link?.title"
+          />
+        </vl-column>
+      </template>
+    </vl-grid>
   </vl-region>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { NavigationMenu } from '~/types/navigationMenu'
 
-export default {
-  name: 'tilesOverview',
-  props: {
-    tiles: {
-      type: Array<NavigationMenu>,
-      default: [
-        {
-          title: 'Waarom OSLO?',
-          links: [
-            {
-              title: 'Over OSLO',
-              href: '/over-oslo',
-              description:
-                'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            },
-            {
-              title: 'OSLO in de praktijk',
-              href: '/oslo-in-de-praktijk',
-              description:
-                'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            },
-            {
-              title: 'OSLO',
-              href: '/oslo-in-de-praktijk',
-              description:
-                'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            },
-          ],
-        },
-      ],
-    },
+defineProps({
+  tiles: {
+    type: Array<NavigationMenu>,
   },
-}
+})
 </script>

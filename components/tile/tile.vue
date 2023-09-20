@@ -9,9 +9,4 @@ import { NavigationLink } from '~/types/navigationLink'
 defineProps<NavigationLink>()
 </script>
 
-<style scoped lang="scss">
-.tile {
-  min-height: 5rem;
-  height: 100%;
-}
-</style>
+<style scoped lang="scss" src="./style.scss" />

@@ -30,6 +30,10 @@
         </vl-column>
         <infoTilesOverview :tiles="data?.entries" />
       </vl-region>
+      <vl-region>
+        <vl-title tag-name="h2">Veelgestelde vragen</vl-title>
+        <accordion :items="data?.content?.faq" />
+      </vl-region>
     </vl-layout>
     <content-footer />
   </vl-region>
@@ -42,7 +46,6 @@ const { path } = useRoute()
 
 // Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
 const { data } = await useAsyncData('', async () => {
-  console.log(path)
   const [content, data] = await Promise.all([
     // Hardcoded this value due to trailing slashes causing issues with fetching the correct content
     queryContent<Content>('/ns/content').where({ _extension: 'md' }).find(),

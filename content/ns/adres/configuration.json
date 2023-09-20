@@ -1,5 +1,7 @@
 {
-  "name": "adres",
+  "title": "adres",
+  "description": "Het Adres vocabularium legt termen en definities vast voor het beschrijven van een Belgisch adres.",
+  "href": "https://data.vlaanderen.be/ns/adres/",
   "datePublished": "2019-12-01",
   "dateModified": "2019-12-01",
   "lastVersion": "https://data.vlaanderen.be/ns/adres",
@@ -24,6 +26,17 @@
     }
   ],
   "contributors": [
+    {
+      "firstName": "Kristof",
+      "lastName": "Vandenbroucke",
+      "email": "kristofvandenbroucke@vlaanderen.be",
+      "workplace": {
+        "name": "Digitaal Vlaanderen",
+        "href": "https://overheid.vlaanderen.be/informatie-vlaanderen"
+      }
+    }
+  ],
+  "editors": [
     {
       "firstName": "Kristof",
       "lastName": "Vandenbroucke",

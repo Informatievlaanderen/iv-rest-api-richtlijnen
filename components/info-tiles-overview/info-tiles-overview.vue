@@ -6,7 +6,7 @@
           :image="tile?.image"
           :href="tile?.href"
           :title="tile?.title"
-          :subtitle="tile?.subtitle"
+          :subtitle="tile?.description"
           :content="tile?.content"
         />
       </vl-column>
@@ -14,28 +14,12 @@
   </vl-region>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { Dataset } from '~/types/dataset'
 
-export default {
-  name: 'infoTilesOverview',
-  props: {
-    tiles: {
-      type: Array<Dataset>,
-      default: [
-        {
-          title: 'Dit is mijn titel',
-          href: 'https://www.google.com',
-          subtitle: 'Dit is mijn subtitel',
-          image: {
-            src: 'https://www.placehold.it/100x100',
-            alt: 'placeholder',
-          },
-          content:
-            'Lorem ipsum dolor sit amet consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies,nunc',
-        },
-      ],
-    },
+defineProps({
+  tiles: {
+    type: Array<Dataset>,
   },
-}
+})
 </script>

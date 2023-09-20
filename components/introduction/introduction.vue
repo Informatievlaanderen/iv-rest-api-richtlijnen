@@ -1,17 +1,9 @@
 <template>
-  <vl-layout>
-    <vl-introduction>
-      <slot />
-    </vl-introduction>
-  </vl-layout>
+  <vl-introduction>
+    <slot />
+  </vl-introduction>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      environment: import.meta.env.VITE_ENVIRONMENT,
-    }
-  },
-}
+<script setup lang="ts" name="introduction">
+
 </script>

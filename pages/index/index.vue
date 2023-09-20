@@ -14,15 +14,12 @@
 
 <script setup lang="ts">
 // Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
-const { data } = await useLazyAsyncData('data', async () => {
+const { data } = await useAsyncData('data', async () => {
   const [navData, datasetsData, faqData] = await Promise.all([
     queryContent('/navigation-menu').find(),
     queryContent('/datasets').find(),
     queryContent('/faq').find(),
   ])
-
-  console.log(navData)
-  console.log(navData)
 
   return {
     navigation: navData[0]?.navigation,

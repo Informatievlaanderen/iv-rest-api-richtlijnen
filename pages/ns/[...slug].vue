@@ -2,7 +2,7 @@
   <vl-region>
     <vl-layout>
       <div class="head">
-        <vl-title tag-name="h1" class="title">{{ data?.name }}</vl-title>
+        <vl-title tag-name="h1" class="title">{{ data?.title }}</vl-title>
         <vl-title tag-name="h2" class="subtitle"
           >Uitgegeven op {{ data?.datePublished }}</vl-title
         >
@@ -11,24 +11,39 @@
           <dd>{{ data?.dateModified }}</dd>
           <dt>Laatste versie</dt>
           <a :href="data?.lastVersion">{{ data?.lastVersion }}</a>
-          <dt>Auteurs</dt>
-          <dd v-for="author in data?.authors">
-            <contributor
-              :firstName="author?.firstName"
-              :lastName="author.lastName"
-              :email="author?.email"
-              :workplace="author?.workplace"
-            />
-          </dd>
-          <dt>Medewerkers</dt>
-          <dd v-for="contributor in data?.contributors">
-            <contributor
-              :firstName="contributor?.firstName"
-              :lastName="contributor.lastName"
-              :email="contributor?.email"
-              :workplace="contributor?.workplace"
-            />
-          </dd>
+          <template v-if="data?.authors">
+            <dt>Auteurs</dt>
+            <dd v-for="author in data?.authors">
+              <contributor
+                :firstName="author?.firstName"
+                :lastName="author.lastName"
+                :email="author?.email"
+                :workplace="author?.workplace"
+              />
+            </dd>
+          </template>
+          <template v-if="data?.editors">
+            <dt>Editoren</dt>
+            <dd v-for="editor in data?.editors">
+              <contributor
+                :firstName="editor?.firstName"
+                :lastName="editor.lastName"
+                :email="editor?.email"
+                :workplace="editor?.workplace"
+              />
+            </dd>
+          </template>
+          <template v-if="data?.contributors">
+            <dt>Medewerkers</dt>
+            <dd v-for="contributor in data?.contributors">
+              <contributor
+                :firstName="contributor?.firstName"
+                :lastName="contributor.lastName"
+                :email="contributor?.email"
+                :workplace="contributor?.workplace"
+              />
+            </dd>
+          </template>
         </dl>
       </div>
       <div class="content">
@@ -108,16 +123,20 @@
 
 <script setup lang="ts">
 import { Configuration } from '~/types/configuration'
-const { path } = useRoute()
+const { path, name, hash, params } = useRoute()
+
 
 // Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
 const { data } = await useAsyncData('data', async () => {
   const [nsData] = await Promise.all([
-    queryContent<Configuration>(`${path}/configuration`).find(),
+    queryContent<Configuration>(`ns/${params?.slug?.[0]}/configuration`).find(),
   ])
 
   return nsData[0]
 })
+
+console.log(path, name, hash, params)
+
 </script>
 
 <style scoped lang="scss" src="./style.scss" />

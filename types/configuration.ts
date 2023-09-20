@@ -9,12 +9,13 @@ interface Definition {
 }
 
 export interface Configuration {
-    name: string
+    title: string
     datePublished: string
     dateModified: string
     lastVersion: string
     authors: Contributor[]
     contributors: Contributor[]
+    editors: Contributor[]
     summary: string
     status: string
     license: string

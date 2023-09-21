@@ -49,6 +49,7 @@ export default defineNuxtConfig({
   // Alias declaration for easier access to components directory
   alias: {
     "@components": fileURLToPath(new URL('./components', import.meta.url)),
+    "@content": fileURLToPath(new URL('./content', import.meta.url)),
     "@types": fileURLToPath(new URL('./types', import.meta.url)),
   },
   // Global CSS: https://nuxt.com/docs/api/configuration/nuxt-config#css
@@ -62,6 +63,8 @@ export default defineNuxtConfig({
   ],
   // Modules: https://nuxt.com/docs/api/configuration/nuxt-config#modules-1
   modules: [
+    // https://github.com/davestewart/nuxt-content-assets
+    'nuxt-content-assets', // make sure to add before content!
     // https://content.nuxtjs.org/
     '@nuxt/content',
   ],

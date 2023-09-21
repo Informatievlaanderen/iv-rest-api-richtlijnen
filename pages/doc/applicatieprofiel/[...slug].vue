@@ -78,7 +78,7 @@
           <vl-region>
             <links-overview :links="data?.datatypes" />
           </vl-region>
-          INSERT IMAGE HERE
+          <img src="overview.jpg" alt="Overview model" />
         </vl-region>
         <vl-title tag-name="h2" class="subtitle">Entiteiten</vl-title>
         <template v-for="entity in data?.entities">
@@ -116,12 +116,14 @@
 
 <script setup lang="ts">
 import { Configuration } from '~/types/configuration'
-const { path } = useRoute()
+const { params } = useRoute()
 
 // Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
 const { data } = await useAsyncData('data', async () => {
   const [nsData] = await Promise.all([
-    queryContent<Configuration>(`${path}/configuration`).find(),
+    queryContent<Configuration>(
+      `doc/applicatieprofiel/${params?.slug?.[0]}/configuration`,
+    ).find(),
   ])
 
   return nsData[0]

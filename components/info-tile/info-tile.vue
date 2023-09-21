@@ -1,5 +1,5 @@
 <template>
-  <vl-info-tile tag-name="div" :href="href" :title="title" :subtitle="subtitle">
+  <vl-info-tile tag-name="div" :href="href" :title="title" :subtitle="description">
     <template v-if="image" v-slot:badge>
       <vl-badge>
         <img :src="image?.src" :alt="image?.alt ?? 'placeholder'" />

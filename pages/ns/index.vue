@@ -1,6 +1,8 @@
 <template>
   <vl-region>
-    <content-header />
+    <content-header
+      subtitle="Vocabularia, applicatieprofielen en codelijsten"
+    />
     <vl-layout>
       <vl-region>
         <introduction v-if="data?.content?.introduction">

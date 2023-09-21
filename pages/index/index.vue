@@ -1,6 +1,6 @@
 <template>
   <vl-region>
-    <content-header />
+    <content-header title="Open standaarden" href="https://www.vlaanderen.be/digitaal-vlaanderen" subtitle="Voor linkende organisaties" />
     <vl-layout>
       <tilesOverview :tiles="data?.navigation" />
       <vl-title tag-name="h2">Datasets</vl-title>

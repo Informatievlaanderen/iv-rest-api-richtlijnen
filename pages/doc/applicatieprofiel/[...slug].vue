@@ -3,14 +3,9 @@
     <vl-layout>
       <div class="head">
         <vl-title tag-name="h1" class="title">{{ data?.title }}</vl-title>
-        <vl-title tag-name="h2" class="subtitle"
-          >Uitgegeven op {{ data?.datePublished }}</vl-title
-        >
         <dl>
           <dt>Laatste aanpasing</dt>
           <dd>{{ data?.dateModified }}</dd>
-          <dt>Laatste versie</dt>
-          <a :href="data?.lastVersion">{{ data?.lastVersion }}</a>
           <template v-if="data?.authors">
             <dt>Auteurs</dt>
             <dd v-for="author in data?.authors">
@@ -48,72 +43,70 @@
       </div>
       <div class="content">
         <vl-region>
+          <introduction>
+            <p>
+              Dit document beschrijft een <strong>applicatieprofiel</strong>, in
+              dit geval <strong>{{ data?.title }}</strong
+              >. Dit applicatieprofiel beantwoordt de vraag over hoe het
+              corresponderende domeinmodel in de praktijk kan toegepast worden.
+              Daarbij worden de beperkingen (kardinaliteit, codelijsten)
+              toegelicht en de overeenkomstige (RDF) termen opgelijst.
+            </p>
+          </introduction>
+        </vl-region>
+        <vl-region>
           <vl-title tag-name="h2" class="subtitle">Samenvatting</vl-title>
-          <div v-html="data?.summary"></div>
+          <div v-html="data?.summary" />
         </vl-region>
         <vl-region>
           <vl-title tag-name="h2" class="subtitle"
             >Status van dit document</vl-title
           >
-          <div v-html="data?.status"></div>
+          <div v-html="data?.status" />
         </vl-region>
-        <ol>
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle">Licentie</vl-title>
-          </li>
-          <vl-region v-html="data?.license"></vl-region>
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle">Conformiteit</vl-title>
-          </li>
-          <vl-region v-html="data?.conformity"></vl-region>
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle">Overzicht</vl-title>
-          </li>
-          <vl-region v-html="data?.overview"></vl-region>
-          <vl-title tag-name="h3" class="subtitle">Klassen</vl-title>
+        <vl-region>
+          <vl-title tag-name="h2" class="subtitle">Confirmiteit</vl-title>
+          <div v-html="data?.conformity" />
+        </vl-region>
+        <vl-region>
+          <vl-title tag-name="h2" class="subtitle">Overzicht</vl-title>
+          <vl-title tag-name="h3" class="subtitle">Entiteiten</vl-title>
           <vl-region>
-            <links-overview :links="data?.classes" />
+            <links-overview :links="data?.entities" />
           </vl-region>
-          <vl-title tag-name="h3" class="subtitle">Eigenschappen</vl-title>
+          <vl-title tag-name="h3" class="subtitle">Datatypes</vl-title>
           <vl-region>
-            <links-overview :links="data?.properties" />
+            <links-overview :links="data?.datatypes" />
           </vl-region>
-          <!-- CLASSES -->
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle">Klassen</vl-title>
-          </li>
-          <vl-region v-for="item in data?.classes">
-            <vl-title tag-name="h3" class="subtitle" :id="item?.href"
-              >Klasse {{ item?.title }}</vl-title
-            >
-            <data-table :headers="item?.headers" :rows="item?.rows" />
+          INSERT IMAGE HERE
+        </vl-region>
+        <vl-title tag-name="h2" class="subtitle">Entiteiten</vl-title>
+        <template v-for="entity in data?.entities">
+          <entity
+            :title="entity?.title"
+            :href="entity?.href"
+            :description="entity?.description"
+            :usage="entity?.usage"
+            :properties="entity?.properties"
+            :vocHref="entity?.vocHref"
+          />
+          <vl-region>
+            <property-table :properties="entity?.properties" />
           </vl-region>
-          <!-- PROPERTIES -->
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle">Eigenschappen</vl-title>
-          </li>
-          <vl-region v-for="item in data?.properties">
-            <vl-title tag-name="h3" class="subtitle" :id="item?.href"
-              >Eigenschap {{ item?.title }}</vl-title
-            >
-            <data-table
-              v-for="item in data?.properties"
-              :headers="item?.headers"
-              :rows="item?.rows"
-            />
-          </vl-region>
-          <!-- TERMINOLOGIES -->
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle"
-              >Externe terminologie</vl-title
-            >
-          </li>
-        </ol>
-        <vl-region v-for="item in data?.terminologies">
-          <vl-title tag-name="h3" class="subtitle" :id="item?.href">{{
-            item?.title
-          }}</vl-title>
-          <data-table :headers="item?.headers" :rows="item?.rows" />
+        </template>
+        <vl-region>
+          <vl-title tag-name="h2" class="subtitle">Datatypes</vl-title>
+          <template v-for="datatype in data?.datatypes">
+            <property-table :properties="datatype?.properties" />
+          </template>
+        </vl-region>
+        <vl-region>
+          <vl-title tag-name="h2" class="subtitle">JSON-LD context</vl-title>
+          <p v-if="data?.jsonLD">
+            Een herbruikbare JSON-LD context definitie voor dit
+            applicatieprofiel is terug te vinden op:
+            <a :href="data?.jsonLD">{{ data?.jsonLD }}</a>
+          </p>
         </vl-region>
       </div>
     </vl-layout>
@@ -134,5 +127,3 @@ const { data } = await useAsyncData('data', async () => {
   return nsData[0]
 })
 </script>
-
-<style scoped lang="scss" src="./style.scss" />

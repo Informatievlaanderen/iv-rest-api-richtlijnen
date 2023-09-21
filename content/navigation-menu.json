@@ -11,12 +11,12 @@
         {
           "title": "Vocabularia Standaardenregister",
           "description": "Ontdek de vocabularia",
-          "href": "https://data.vlaanderen.be/ns/#Vocabularia"
+          "href": "ns/#Vocabularia"
         },
         {
           "title": "Applicatieprofielen",
           "description": "Ga aan de slag met onze applicatieprofielen",
-          "href": "https://data.vlaanderen.be/ns/#Applicatieprofielen"
+          "href": "/ns/#Applicatieprofielen"
         }
       ]
     },
@@ -31,12 +31,12 @@
         {
           "title": "OSLO Service",
           "description": "Ontdek hoe wij jou kunnen ondersteunen",
-          "href": "https://data.vlaanderen.be/ns/#Vocabularia"
+          "href": "ns/#Vocabularia"
         },
         {
           "title": "Instrumenten en afspraken",
           "description": "Voor developers",
-          "href": "https://data.vlaanderen.be/ns/#Applicatieprofielen"
+          "href": "ns/#Applicatieprofielen"
         }
       ]
     },
@@ -51,12 +51,12 @@
         {
           "title": "OSLO Service",
           "description": "Ontdek hoe wij jou kunnen ondersteunen",
-          "href": "https://data.vlaanderen.be/ns/#Vocabularia"
+          "href": "ns/#Vocabularia"
         },
         {
           "title": "Instrumenten en afspraken",
           "description": "Voor developers",
-          "href": "https://data.vlaanderen.be/ns/#Applicatieprofielen"
+          "href": "ns/#Applicatieprofielen"
         }
       ]
     }

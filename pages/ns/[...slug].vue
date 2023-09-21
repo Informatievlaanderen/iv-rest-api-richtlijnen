@@ -49,27 +49,27 @@
       <div class="content">
         <vl-region>
           <vl-title tag-name="h2" class="subtitle">Samenvatting</vl-title>
-          <div v-html="data?.summary"></div>
+          <div v-html="data?.summary" />
         </vl-region>
         <vl-region>
           <vl-title tag-name="h2" class="subtitle"
             >Status van dit document</vl-title
           >
-          <div v-html="data?.status"></div>
+          <div v-html="data?.status" />
         </vl-region>
         <ol>
           <li class="list__item">
             <vl-title tag-name="h2" class="subtitle">Licentie</vl-title>
           </li>
-          <vl-region v-html="data?.license"></vl-region>
+          <vl-region v-html="data?.license" />
           <li class="list__item">
             <vl-title tag-name="h2" class="subtitle">Conformiteit</vl-title>
           </li>
-          <vl-region v-html="data?.conformity"></vl-region>
+          <vl-region v-html="data?.conformity" />
           <li class="list__item">
             <vl-title tag-name="h2" class="subtitle">Overzicht</vl-title>
           </li>
-          <vl-region v-html="data?.overview"></vl-region>
+          <vl-region v-html="data?.overview" />
           <vl-title tag-name="h3" class="subtitle">Klassen</vl-title>
           <vl-region>
             <links-overview :links="data?.classes" />
@@ -125,7 +125,6 @@
 import { Configuration } from '~/types/configuration'
 const { path, name, hash, params } = useRoute()
 
-
 // Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
 const { data } = await useAsyncData('data', async () => {
   const [nsData] = await Promise.all([
@@ -135,8 +134,4 @@ const { data } = await useAsyncData('data', async () => {
   return nsData[0]
 })
 
-console.log(path, name, hash, params)
-
 </script>
-
-<style scoped lang="scss" src="./style.scss" />

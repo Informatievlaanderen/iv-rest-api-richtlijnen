@@ -21,7 +21,7 @@ export interface Configuration {
     summary: string
     status: string
     license: string
-    conformity: string
+    conformance: string
     overview: string
     classes?: Definition[]
     properties?: Definition[]

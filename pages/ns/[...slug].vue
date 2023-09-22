@@ -195,4 +195,8 @@ const { data } = await useAsyncData('data', async () => {
 
   return nsData[0]
 })
+
+if (!data.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+}
 </script>

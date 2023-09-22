@@ -191,7 +191,9 @@ const { data } = await useAsyncData('data', async () => {
       `doc/applicatieprofiel/${params?.slug?.[0]}/configuration`,
     ).find(),
   ])
-
   return nsData[0]
 })
+if (!data.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+}
 </script>

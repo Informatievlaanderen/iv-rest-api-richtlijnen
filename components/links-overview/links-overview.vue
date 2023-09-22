@@ -9,6 +9,6 @@
 </template>
 
 <script setup lang="ts" name="linksOverview">
-import { LinksOverview } from '~/types/linksOverview'
-defineProps<LinksOverview>()
+import { OverviewLinks } from '~/types/linksOverview'
+defineProps<OverviewLinks>()
 </script>

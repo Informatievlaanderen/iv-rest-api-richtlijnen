@@ -136,7 +136,7 @@
           </vl-region>
         </vl-column>
         <vl-column width="3" width-s="12">
-          <side-navigation :links="links"></side-navigation>
+          <side-navigation :links="overview?.links"></side-navigation>
         </vl-column>
       </vl-grid>
     </vl-layout>
@@ -146,44 +146,46 @@
 
 <script setup lang="ts">
 import { Configuration } from '~/types/configuration'
-import { NavigationLink } from '~/types/navigationLink'
+import { OverviewLinks } from '~/types/linksOverview'
 
 const { params } = useRoute()
 
-const links: NavigationLink[] = [
-  {
-    href: '#abstract',
-    title: 'Samenvatting',
-  },
-  {
-    href: '#sotd',
-    title: 'Status van dit document',
-  },
-  {
-    href: '#license-and-liability',
-    title: '1. Licentie',
-  },
-  {
-    href: '#conformance-statement',
-    title: '2. Conformiteit',
-  },
-  {
-    href: '#overview',
-    title: '3. Overzicht',
-  },
-  {
-    href: '#classes',
-    title: '4. Klassen',
-  },
-  {
-    href: '#properties',
-    title: '5. Eigenschappen',
-  },
-  {
-    href: '#external',
-    title: '6. Externe terminologie',
-  },
-]
+const overview: OverviewLinks = {
+  links: [
+    {
+      href: '#abstract',
+      title: 'Samenvatting',
+    },
+    {
+      href: '#sotd',
+      title: 'Status van dit document',
+    },
+    {
+      href: '#license-and-liability',
+      title: '1. Licentie',
+    },
+    {
+      href: '#conformance-statement',
+      title: '2. Conformiteit',
+    },
+    {
+      href: '#overview',
+      title: '3. Overzicht',
+    },
+    {
+      href: '#classes',
+      title: '4. Klassen',
+    },
+    {
+      href: '#properties',
+      title: '5. Eigenschappen',
+    },
+    {
+      href: '#external',
+      title: '6. Externe terminologie',
+    },
+  ],
+}
 
 // Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
 const { data } = await useAsyncData('data', async () => {

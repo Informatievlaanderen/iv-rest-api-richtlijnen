@@ -6,11 +6,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(value, key) in rows" :key="key">
-        <td>
-          {{ key }}
+      <tr v-for="row in rows">
+        <td v-for="element in row">
+          {{ element }}
         </td>
-        <td>{{ value }}</td>
       </tr>
     </tbody>
   </vl-data-table>
@@ -20,4 +19,3 @@
 import { DataTable } from '~/types/dataTable'
 defineProps<DataTable>()
 </script>
-=

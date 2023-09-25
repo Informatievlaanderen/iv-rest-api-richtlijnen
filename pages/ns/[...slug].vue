@@ -46,76 +46,99 @@
           </template>
         </dl>
       </div>
-      <div class="content">
-        <vl-region>
-          <vl-title tag-name="h2" class="subtitle">Samenvatting</vl-title>
-          <div v-html="data?.summary"></div>
-        </vl-region>
-        <vl-region>
-          <vl-title tag-name="h2" class="subtitle"
-            >Status van dit document</vl-title
-          >
-          <div v-html="data?.status"></div>
-        </vl-region>
-        <ol>
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle">Licentie</vl-title>
-          </li>
-          <vl-region v-html="data?.license"></vl-region>
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle">Conformiteit</vl-title>
-          </li>
-          <vl-region v-html="data?.conformity"></vl-region>
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle">Overzicht</vl-title>
-          </li>
-          <vl-region v-html="data?.overview"></vl-region>
-          <vl-title tag-name="h3" class="subtitle">Klassen</vl-title>
+      <vl-grid class="content">
+        <vl-column width="9" width-s="12">
           <vl-region>
-            <links-overview :links="data?.classes" />
-          </vl-region>
-          <vl-title tag-name="h3" class="subtitle">Eigenschappen</vl-title>
-          <vl-region>
-            <links-overview :links="data?.properties" />
-          </vl-region>
-          <!-- CLASSES -->
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle">Klassen</vl-title>
-          </li>
-          <vl-region v-for="item in data?.classes">
-            <vl-title tag-name="h3" class="subtitle" :id="item?.href"
-              >Klasse {{ item?.title }}</vl-title
+            <vl-title tag-name="h2" class="subtitle" id="abstract"
+              >Samenvatting</vl-title
             >
+            <div v-html="data?.summary" />
+          </vl-region>
+          <vl-region>
+            <vl-title tag-name="h2" class="subtitle" id="sotd"
+              >Status van dit document</vl-title
+            >
+            <div v-html="data?.status" />
+          </vl-region>
+          <ol>
+            <li class="list__item">
+              <vl-title
+                tag-name="h2"
+                class="subtitle"
+                id="license-and-liability"
+                >Licentie</vl-title
+              >
+            </li>
+            <vl-region v-html="data?.license" />
+            <li class="list__item">
+              <vl-title
+                tag-name="h2"
+                class="subtitle"
+                id="conformance-statement"
+                >Conformiteit</vl-title
+              >
+            </li>
+            <vl-region v-html="data?.conformance" />
+            <li class="list__item">
+              <vl-title tag-name="h2" class="subtitle" id="overview"
+                >Overzicht</vl-title
+              >
+            </li>
+            <vl-region v-html="data?.overview" />
+            <vl-title tag-name="h3" class="subtitle">Klassen</vl-title>
+            <vl-region>
+              <links-overview :links="data?.classes" />
+            </vl-region>
+            <vl-title tag-name="h3" class="subtitle">Eigenschappen</vl-title>
+            <vl-region>
+              <links-overview :links="data?.properties" />
+            </vl-region>
+            <!-- CLASSES -->
+            <li class="list__item">
+              <vl-title tag-name="h2" class="subtitle" id="classes"
+                >Klassen</vl-title
+              >
+            </li>
+            <vl-region v-for="item in data?.classes">
+              <vl-title tag-name="h3" class="subtitle" :id="item?.href"
+                >Klasse {{ item?.title }}</vl-title
+              >
+              <data-table :headers="item?.headers" :rows="item?.rows" />
+            </vl-region>
+            <!-- PROPERTIES -->
+            <li class="list__item">
+              <vl-title tag-name="h2" class="subtitle" id="properties"
+                >Eigenschappen</vl-title
+              >
+            </li>
+            <vl-region v-for="item in data?.properties">
+              <vl-title tag-name="h3" class="subtitle" :id="item?.href"
+                >Eigenschap {{ item?.title }}</vl-title
+              >
+              <data-table
+                v-for="item in data?.properties"
+                :headers="item?.headers"
+                :rows="item?.rows"
+              />
+            </vl-region>
+            <!-- TERMINOLOGIES -->
+            <li class="list__item">
+              <vl-title tag-name="h2" class="subtitle" id="external"
+                >Externe terminologie</vl-title
+              >
+            </li>
+          </ol>
+          <vl-region v-for="item in data?.terminologies">
+            <vl-title tag-name="h3" class="subtitle" :id="item?.href">{{
+              item?.title
+            }}</vl-title>
             <data-table :headers="item?.headers" :rows="item?.rows" />
           </vl-region>
-          <!-- PROPERTIES -->
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle">Eigenschappen</vl-title>
-          </li>
-          <vl-region v-for="item in data?.properties">
-            <vl-title tag-name="h3" class="subtitle" :id="item?.href"
-              >Eigenschap {{ item?.title }}</vl-title
-            >
-            <data-table
-              v-for="item in data?.properties"
-              :headers="item?.headers"
-              :rows="item?.rows"
-            />
-          </vl-region>
-          <!-- TERMINOLOGIES -->
-          <li class="list__item">
-            <vl-title tag-name="h2" class="subtitle"
-              >Externe terminologie</vl-title
-            >
-          </li>
-        </ol>
-        <vl-region v-for="item in data?.terminologies">
-          <vl-title tag-name="h3" class="subtitle" :id="item?.href">{{
-            item?.title
-          }}</vl-title>
-          <data-table :headers="item?.headers" :rows="item?.rows" />
-        </vl-region>
-      </div>
+        </vl-column>
+        <vl-column width="3" width-s="12">
+          <side-navigation :links="overview?.links"></side-navigation>
+        </vl-column>
+      </vl-grid>
     </vl-layout>
     <content-footer />
   </vl-region>
@@ -123,8 +146,46 @@
 
 <script setup lang="ts">
 import { Configuration } from '~/types/configuration'
-const { path, name, hash, params } = useRoute()
+import { OverviewLinks } from '~/types/linksOverview'
 
+const { params } = useRoute()
+
+const overview: OverviewLinks = {
+  links: [
+    {
+      href: '#abstract',
+      title: 'Samenvatting',
+    },
+    {
+      href: '#sotd',
+      title: 'Status van dit document',
+    },
+    {
+      href: '#license-and-liability',
+      title: '1. Licentie',
+    },
+    {
+      href: '#conformance-statement',
+      title: '2. Conformiteit',
+    },
+    {
+      href: '#overview',
+      title: '3. Overzicht',
+    },
+    {
+      href: '#classes',
+      title: '4. Klassen',
+    },
+    {
+      href: '#properties',
+      title: '5. Eigenschappen',
+    },
+    {
+      href: '#external',
+      title: '6. Externe terminologie',
+    },
+  ],
+}
 
 // Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
 const { data } = await useAsyncData('data', async () => {
@@ -135,8 +196,7 @@ const { data } = await useAsyncData('data', async () => {
   return nsData[0]
 })
 
-console.log(path, name, hash, params)
-
+if (!data.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+}
 </script>
-
-<style scoped lang="scss" src="./style.scss" />

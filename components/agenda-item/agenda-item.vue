@@ -2,6 +2,7 @@
   <vl-grid mod-stacked>
     <vl-column v-for="(item, key) in events" :key="key">
       <vl-agenda-item
+        v-if="item?.startDate && item?.endDate"
         :title="item.title"
         :date="{
           datetime: item.startDate,
@@ -14,19 +15,18 @@
         :note="'Locatie: ' + item.location"
       >
         <p>
-          <b
-            >
-            Op {{ item.startDate.toLocaleDateString('nl-BE') }}
+          <b>
+            Op {{ new Date(item.startDate).toLocaleDateString('nl-BE') }}
             van
             {{
-              item.startDate.toLocaleTimeString('nl-BE', {
+              new Date(item.startDate).toLocaleTimeString('nl-BE', {
                 hour: 'numeric',
                 minute: 'numeric',
               })
             }}
             tot
             {{
-              item.endDate.toLocaleTimeString('nl-BE', {
+              new Date(item.endDate).toLocaleTimeString('nl-BE', {
                 hour: 'numeric',
                 minute: 'numeric',
               })
@@ -38,11 +38,11 @@
   </vl-grid>
 </template>
 
-<script setup lang="ts">
-//import { AgendaItem } from '~/types/agendaItem'
+<script setup lang="ts" name="agendaItem">
+import { Agenda } from '~/types/agenda'
 defineProps({
   events: {
-    type: Array<any>,
+    type: Array<Agenda>,
   },
 })
 </script>

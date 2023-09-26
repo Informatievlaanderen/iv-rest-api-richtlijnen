@@ -8,10 +8,22 @@ export interface Agenda {
 }
 
 export interface MarcomAgenda {
+    id?: string
     title?: string
-    startDate?: string;
-    endDate?: string;
-    campaignTitle?: string;
-    registrationForm?: string;
-    physicalLocation: string;
+    summary?: string
+    summaryTitle?: string
+    startDate?: string
+    endDate?: string
+    physicalLocation?: string
+    status?: string
+    type?: string
+    themeId?: string
+    entityId?: string
+    entity?: string
+    registrationForm?: string
+    campaignId?: string
+    campaignTitle?: string
+    registrationDeadlineDate?: string
+    created?: string
+    updated?: string
 }

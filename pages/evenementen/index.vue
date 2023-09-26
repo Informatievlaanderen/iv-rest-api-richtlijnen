@@ -45,19 +45,26 @@ const { data } = await useAsyncData(
     const domainFilter = {
       name: 'Domeinen',
       values: [
+        'Alle evenementen',
         ...new Set(
           osloEventData.map((x: Agenda) => x.campaignTitle).sort() as string[],
         ),
       ],
     }
 
-    const filteredEvents = osloEventData.filter(
-      (x: Agenda) => x?.campaignTitle?.includes(selectedCampaign?.value),
-    )
-
-    return {
-      filters: [domainFilter],
-      events: filteredEvents,
+    if (selectedCampaign?.value !== 'Alle evenementen') {
+      const filteredEvents = osloEventData.filter(
+        (x: Agenda) => x?.campaignTitle?.includes(selectedCampaign?.value),
+      )
+      return {
+        filters: [domainFilter],
+        events: filteredEvents,
+      }
+    } else {
+      return {
+        filters: [domainFilter],
+        events: osloEventData,
+      }
     }
   },
   { watch: [selectedCampaign] },

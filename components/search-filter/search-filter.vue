@@ -1,6 +1,5 @@
 <template>
   <vl-search-filter mod-alt>
-
     <template v-slot:items>
       <vl-search-filter-section v-for="filter in filters">
         <vl-search-filter-section-title>
@@ -23,7 +22,7 @@
 
 <script setup lang="ts" name="searchFilter">
 import { EventFilter } from '~/types/eventFilter'
-const radioValue = ref('')
+const radioValue = ref('Alle evenementen')
 defineProps({
   filters: {
     type: Array<EventFilter>,

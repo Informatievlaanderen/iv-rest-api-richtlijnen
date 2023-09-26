@@ -30,7 +30,7 @@ export default defineEventHandler(async () => {
     } catch (err: any) {
         throw createError({
             message: "Failed to fetch data from MarCom event API",
-            statusCode: 400,
+            statusCode: 500,
             fatal: false,
         });
     }

@@ -17,11 +17,6 @@
 </template>
 
 <script setup lang="ts">
-import { Accordion } from '~/types/accordion'
-
-defineProps({
-  items: {
-    type: Array<Accordion>,
-  },
-})
+import { Accordions } from '~/types/accordion'
+defineProps<Accordions>()
 </script>

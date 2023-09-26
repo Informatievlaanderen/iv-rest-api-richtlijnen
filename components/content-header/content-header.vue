@@ -15,7 +15,7 @@
       v-if="subtitle"
       :title="subtitle"
       tag-name="h1"
-      href="https://youtu.be/bLHL75H_VEM"
+      :href="href"
       :context="context"
     />
   </vl-content-header>

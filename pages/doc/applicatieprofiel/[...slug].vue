@@ -186,12 +186,12 @@ const links: NavigationLink[] = [
 
 // Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
 const { data } = await useAsyncData('data', async () => {
-  const [nsData] = await Promise.all([
+  const [data] = await Promise.all([
     queryContent<Configuration>(
       `doc/applicatieprofiel/${params?.slug?.[0]}/configuration`,
     ).find(),
   ])
-  return nsData[0]
+  return data[0]
 })
 if (!data.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })

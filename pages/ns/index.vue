@@ -39,14 +39,13 @@
 <script setup lang="ts">
 import { Configuration } from '~/types/configuration'
 import { Content } from '~/types/content'
-const { path } = useRoute()
 
 // Multiple queryContents require to await them all at the same time: https://github.com/nuxt/content/issues/1368
 const { data } = await useAsyncData('', async () => {
   const [content, vocs, apps] = await Promise.all([
     // Hardcoded this value due to trailing slashes causing issues with fetching the correct content
     queryContent<Content>('/ns/content').where({ _extension: 'md' }).find(),
-    queryContent<Configuration>(`${path}`).where({ _extension: 'json' }).find(),
+    queryContent<Configuration>('/ns/').where({ _extension: 'json' }).find(),
     queryContent<Configuration>('/doc/applicatieprofiel')
       .where({ _extension: 'json' })
       .find(),

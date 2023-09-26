@@ -20,7 +20,7 @@
           />
         </vl-column>
         <vl-column width="7" width-s="12">
-          <agenda-item :events="data?.events" />
+          <agenda :events="data?.events" />
         </vl-column>
       </vl-grid>
     </vl-layout>
@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { Agenda } from '~/types/agenda'
+import { AgendaItem } from '~/types/agenda'
 
 let selectedCampaign = ref('')
 
@@ -40,21 +40,21 @@ const updateFilter = (campaignTitle: string) => {
 const { data } = await useAsyncData(
   'data',
   async () => {
-    const osloEventData: Array<Agenda> = await $fetch('/api/marcom')
+    const osloEventData: Array<AgendaItem> = await $fetch('/api/marcom')
 
     const domainFilter = {
       name: 'Domeinen',
       values: [
         'Alle evenementen',
         ...new Set(
-          osloEventData.map((x: Agenda) => x.campaignTitle).sort() as string[],
+          osloEventData.map((x: AgendaItem) => x.campaignTitle).sort() as string[],
         ),
       ],
     }
 
     if (selectedCampaign?.value !== 'Alle evenementen') {
       const filteredEvents = osloEventData.filter(
-        (x: Agenda) => x?.campaignTitle?.includes(selectedCampaign?.value),
+        (x: AgendaItem) => x?.campaignTitle?.includes(selectedCampaign?.value),
       )
       return {
         filters: [domainFilter],

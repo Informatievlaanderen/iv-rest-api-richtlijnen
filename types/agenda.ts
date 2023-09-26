@@ -1,4 +1,4 @@
-export interface Agenda {
+export interface AgendaItem {
     title?: string
     startDate?: string;
     endDate?: string;

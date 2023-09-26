@@ -1,8 +1,8 @@
-import { MarcomAgenda, Agenda } from "~/types/agenda";
+import { MarcomAgenda, AgendaItem } from "~/types/agenda";
 
 export default defineEventHandler(async () => {
     try {
-        const osloEventData: Array<Agenda> = (
+        const osloEventData: Array<AgendaItem> = (
             await fetch(import.meta.env.VITE_EVENT_API).then((result) =>
                 result.json(),
             )

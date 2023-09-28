@@ -2,7 +2,7 @@
   <vl-person-info :image-src="image?.src">
     <vl-title tagName="h2">{{ title }}</vl-title>
     <vl-typography>
-      {{ description }}
+      <div class="description" v-html="description" />
     </vl-typography>
   </vl-person-info>
 </template>
@@ -11,3 +11,5 @@
 import { Person } from '~/types/person'
 defineProps<Person>()
 </script>
+
+<style scoped lang="scss" src="./style.scss" />

@@ -7,11 +7,18 @@
     </thead>
     <tbody>
       <tr v-for="row in rows">
-        <td v-for="element in row">
-          {{ element }}
+        <td v-for="item in row">
+          {{ item }}
         </td>
       </tr>
     </tbody>
+    <tfoot v-if="footer?.length" class="footer">
+      <tr>
+        <td v-for="row in footer">
+          {{ row }}
+        </td>
+      </tr>
+    </tfoot>
   </vl-data-table>
 </template>
 
@@ -19,3 +26,5 @@
 import { DataTable } from '~/types/dataTable'
 defineProps<DataTable>()
 </script>
+
+<style scoped lang="scss" src="./style.scss" />

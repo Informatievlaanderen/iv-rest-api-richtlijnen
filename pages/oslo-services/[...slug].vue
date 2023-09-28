@@ -29,6 +29,11 @@
         <vl-title tag-name="h2" tag-style="h2" mod-no-space-bottom>
           Indicatieve raming
         </vl-title>
+        <data-table
+          :headers="data?.estimate?.headers"
+          :rows="data?.estimate?.rows"
+          :footer="data?.estimate?.footer"
+        />
       </vl-region>
     </vl-layout>
     <content-footer />

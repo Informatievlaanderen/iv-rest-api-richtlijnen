@@ -15,9 +15,9 @@
   "team": [
     {
       "title": "Project manager",
-      "description": "De PM zal het analysetraject coördineren en de kwaliteit bewaken. Hij brengt uiteraard de expertise van OSLO (proces en methode, bestaande modellen, ...)",
+      "description": "<div class='list'>De PM zal het analysetraject coördineren en de kwaliteit bewaken. Hij brengt uiteraard de expertise van OSLO (proces en methode, bestaande modellen, ...)<ul><li>Ervaring met bestaande OSLO-modellen</li><li >Semantische expertise</li><li >Ervaring met het OSLO-team</li><li >Ervaring met OSLO proces en methode</li><li >Ervaring met faciliteren van werkgroepen</li></ul></div>",
       "image": {
-        "src": "https://via.placeholder.com/300?text=placeholder",
+        "src": "https://ui-avatars.com/api/?name=Project+Manager",
         "alt": "Project manager"
       }
     },
@@ -25,7 +25,7 @@
       "title": "Project manager",
       "description": "De PM zal het analysetraject coördineren en de kwaliteit bewaken. Hij brengt uiteraard de expertise van OSLO (proces en methode, bestaande modellen, ...)",
       "image": {
-        "src": "https://via.placeholder.com/300?text=placeholder",
+        "src": "https://ui-avatars.com/api/?name=Project+Manager",
         "alt": "Project manager"
       }
     },
@@ -33,9 +33,18 @@
       "title": "Project manager",
       "description": "De PM zal het analysetraject coördineren en de kwaliteit bewaken. Hij brengt uiteraard de expertise van OSLO (proces en methode, bestaande modellen, ...)",
       "image": {
-        "src": "https://via.placeholder.com/300?text=placeholder",
+        "src": "https://ui-avatars.com/api/?name=Project+Manager",
         "alt": "Project manager"
       }
     }
-  ]
+  ],
+  "estimate": {
+    "headers": ["Activiteit", "Aantal mandagen"],
+    "rows": [
+      ["Kickoff", 0.5],
+      ["Overlap met bestaande standaarden", 3.5],
+      ["Rapportering", 1]
+    ],
+    "footer": ["Totaal", 5]
+  }
 }

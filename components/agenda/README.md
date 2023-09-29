@@ -1,6 +1,8 @@
 # Agenda
 
-This component is a reusable calendar component. It's a wrapper around the [vl-agenda-item component](https://overheid.vlaanderen.be/webuniversum/v3/documentation/components/vl-ui-agenda-item) from the Webuniversum of the Flemish Government.
+This component is a reusable entity component.
+
+This component also incorporates pagination. The pagination is based on the [vl-pager component](https://overheid.vlaanderen.be/webuniversum/v3/documentation/components/vl-ui-pager) from the Webuniversum of the Flemish Government.
 
 ## How to use
 

@@ -2,6 +2,13 @@ import { defineNuxtConfig } from 'nuxt/config'
 import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    // private runtime env variables. Think of api keys: https://nuxt.com/docs/guide/going-further/runtime-config#environment-variables
+    // This is needed to pass the .env variables to the build process
+    EVENT_API: import.meta.env.VITE_EVENT_API,
+    // public runtime env variables
+    // public: {}
+  },
   app: {
     head: {
       title: 'data.vlaanderen.be',

@@ -1,9 +1,12 @@
 import { MarcomAgenda, AgendaItem } from "~/types/agenda";
 
 export default defineEventHandler(async () => {
+    const config = useRuntimeConfig();
+    const EVENT_API_URL = config.EVENT_API as string;
+
     try {
         const osloEventData: Array<AgendaItem> = (
-            await fetch(import.meta.env.VITE_EVENT_API).then((result) =>
+            await fetch(EVENT_API_URL).then((result) =>
                 result.json(),
             )
         )

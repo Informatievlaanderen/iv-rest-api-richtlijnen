@@ -6,6 +6,6 @@ This component is a reusable accordion component. It's a wrapper around the [vl-
 
 ```js
 <template>
-    <accordion items=[] />
+    <accordion :items="[]" />
 </template>
 ```

@@ -76,7 +76,6 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      crawlLinks: true,
       routes: ['/404.html', '/ns/adres', '/doc/applicatieprofiel/adresregister'],
       ignore: ['/api']
     }

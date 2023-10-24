@@ -1,4 +1,5 @@
 export interface DataTable {
     headers?: Array<string | number>,
-    rows?: Object
+    rows?: Array<string | number>
+    footer?: Array<string | number>
 }

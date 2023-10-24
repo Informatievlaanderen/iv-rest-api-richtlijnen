@@ -2,15 +2,22 @@
   <vl-content-header
     mod-large
     mod-show-mobile
+    :mod-context="context"
     :background="{
       src: '//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_narrow/header.jpg',
       alt: 'Content Header',
     }"
   >
     <div v-if="title" class="vl-content-header__logo-wrapper">
-      <vl-content-header-entity :title="title" :href="href" />
+      <vl-content-header-entity :title="title" />
     </div>
-    <vl-content-header-title v-if="subtitle" :title="subtitle ?? 'lol'" tag-name="h1" />
+    <vl-content-header-title
+      v-if="subtitle"
+      :title="subtitle"
+      tag-name="h1"
+      :href="href"
+      :context="context"
+    />
   </vl-content-header>
 </template>
 

@@ -5,3 +5,7 @@ export interface Accordion {
     subtitle: string,
     content: string,
 }
+
+export interface Accordions {
+    items: Array<Accordion>
+}

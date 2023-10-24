@@ -2,6 +2,15 @@ import { defineNuxtConfig } from 'nuxt/config'
 import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
+  // vite: {
+  //   vue: {
+  //     template: {
+  //       transformAssetUrls: {
+  //         includeAbsolute: false,
+  //       }
+  //     }
+  //   }
+  // },
   app: {
     head: {
       title: 'data.vlaanderen.be',
@@ -73,5 +82,23 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'light-plus'
     }
-  }
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/404.html', '/ns/adres', '/doc/applicatieprofiel/adresregister', 'doc/applicatieprofiel/adresregister/overview.jpg'],
+      ignore: ['/api']
+    }
+  },
+  // Extra vite configuration due to Rollup not being able to build images 
+  vite: {
+    vue: {
+      template: {
+        transformAssetUrls: {
+          base: null,
+          includeAbsolute: false,
+        }
+      }
+    }
+  },
 })

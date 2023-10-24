@@ -105,7 +105,10 @@
             <vl-region>
               <links-overview :links="data?.datatypes" />
             </vl-region>
-            <img src="overview.jpg" alt="Overview model" />
+            <img
+              :src="`/doc/applicatieprofiel/${params?.slug?.[0]}/overview.jpg`"
+              alt="Overview model"
+            />
           </vl-region>
           <vl-title tag-name="h2" class="subtitle">Entiteiten</vl-title>
           <template v-for="entity in data?.entities">
@@ -193,7 +196,11 @@ const { data } = await useAsyncData('data', async () => {
   ])
   return nsData[0]
 })
-if (!data.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+if (!data?.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+    fatal: true,
+  })
 }
 </script>

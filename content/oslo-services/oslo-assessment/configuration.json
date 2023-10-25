@@ -1,0 +1,50 @@
+{
+  "title": "OSLO Assessement",
+  "description": "Ontwikkelen van een datastandaard volgens de Proces & Methode van OSLO",
+  "goal": "Overheden op lokaal, Vlaams, interfederaal en Europees niveau moeten in het kader van hun dienstverlening vaak samenwerken. In praktijk moeten bijgevolg heel wat gegevens uitgewisseld worden tussen de verschillende administraties. Deze gegevens zijn afkomstig uit verschillende systemen, zijn mogelijks niet in hetzelfde technische formaat beschikbaar, en volgen niet noodzakelijk dezelfde semantiek. Zonder het maken van afspraken, wordt kwaliteitsvolle gegevensuitwisseling onmogelijk. Deze afspraken dienen zo breed mogelijk verankerd te worden en leiden waar relevant tot een standaard met een vrijwillig toe te passen, ‘pas toe of leg uit’ of verplicht karakter, om zo nodeloze kosten voor gegevensuitwisseling te besparen. Bij het ontwikkelen van standaarden door Vlaamse entiteiten of lokale besturen is het van belang dat de doelen van de verschillende belanghebbenden gealigneerd zijn, ook binnen de hiërarchie van een organisatie. Alle betrokkenen moeten op de hoogte zijn van de voordelen die een effectief en efficiënt gebruik van de standaard met zich meebrengt. De belanghebbenden moeten in dit geval overtuigd zijn van het nut (al dan niet rechtstreeks voor hen). Het ontwikkelproces is gebaseerd op internationale standaarden (van onder meer ISA, W3C en OpenStand), garandeert voldoende draagvlak bij belanghebbenden en voorziet in afstemming met experten zowel binnen de eigen organisatie als uit het werkveld. Voor een gedetailleerde beschrijving van het proces en methode voor het ontwikkelen van datastandaarden zie volgend <a href='https://data.vlaanderen.be/cms/Proces_en_methode_voor_de_erkenning_van_datastandaarden_v1.0.pdf'>document</a>. Voorbeelden van datastandaarden kunnen teruggevonden worden op het <a href='https://data.vlaanderen.be/standaarden/'>standaardenregister</a>.",
+  "roadmap": [
+    {
+      "title": "Opzetten van de werkgroep en omgeving",
+      "description": "<p>In deze stap wordt de praktische kant voor de organisatie van de werkgroep opgezet. Dit houdt in dat er een projectomgeving opgezet wordt, de leden van de werkgroep worden uitgenodigd en de samenstelling en wie welke rol opneemt wordt vastgelegd.</p> <p>De uit te werken standaard zit nu in de fase “in ontwikkeling”. Verder wordt de planning voor het organiseren van de werkgroepvergaderingen, de publieke review en het finaliseren uitgewerkt.</p>"
+    },
+    {
+      "title": "Uitwerken van een initiële draft",
+      "description": "<p>Op basis van de kennis aan het begin van het traject, bijvoorbeeld op basis van beschikbare projectdocumentatie, wireframes, procesbeschrijvingen, uitgewerkte use cases en bestaande modellen en standaarden wordt een sneuvelversie van de specificatie opgesteld.</p> <p>Vragen en eventuele problemen die voorkomen uit de analyse, worden opgelijst in een actielijst. Voor zoveel mogelijk punten wordt een voorstel tot oplossing uitgewerkt. Dit zal als vertrekpunt dienen voor de besprekingen en discussies in de werkgroepvergaderingen.</p>"
+    }
+  ],
+  "team": [
+    {
+      "title": "Project manager",
+      "description": "<div class='list'>De PM zal het analysetraject coördineren en de kwaliteit bewaken. Hij brengt uiteraard de expertise van OSLO (proces en methode, bestaande modellen, ...)<ul><li>Ervaring met bestaande OSLO-modellen</li><li >Semantische expertise</li><li >Ervaring met het OSLO-team</li><li >Ervaring met OSLO proces en methode</li><li >Ervaring met faciliteren van werkgroepen</li></ul></div>",
+      "image": {
+        "src": "https://ui-avatars.com/api/?name=Project+Manager",
+        "alt": "Project manager"
+      }
+    },
+    {
+      "title": "Project manager",
+      "description": "De PM zal het analysetraject coördineren en de kwaliteit bewaken. Hij brengt uiteraard de expertise van OSLO (proces en methode, bestaande modellen, ...)",
+      "image": {
+        "src": "https://ui-avatars.com/api/?name=Project+Manager",
+        "alt": "Project manager"
+      }
+    },
+    {
+      "title": "Project manager",
+      "description": "De PM zal het analysetraject coördineren en de kwaliteit bewaken. Hij brengt uiteraard de expertise van OSLO (proces en methode, bestaande modellen, ...)",
+      "image": {
+        "src": "https://ui-avatars.com/api/?name=Project+Manager",
+        "alt": "Project manager"
+      }
+    }
+  ],
+  "estimate": {
+    "headers": ["Activiteit", "Aantal mandagen"],
+    "rows": [
+      ["Kickoff", 0.5],
+      ["Overlap met bestaande standaarden", 3.5],
+      ["Rapportering", 1]
+    ],
+    "footer": ["Totaal", 5]
+  }
+}

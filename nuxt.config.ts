@@ -2,9 +2,16 @@ import { defineNuxtConfig } from 'nuxt/config'
 import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    // private runtime env variables. Think of api keys: https://nuxt.com/docs/guide/going-further/runtime-config#environment-variables
+    // This is needed to pass the .env variables to the build process
+    EVENT_API: import.meta.env.VITE_EVENT_API,
+    // public runtime env variables
+    // public: {}
+  },
   app: {
     head: {
-      title: 'Frontend project',
+      title: 'data.vlaanderen.be',
       htmlAttrs: {
         lang: 'nl',
       },
@@ -49,11 +56,13 @@ export default defineNuxtConfig({
   // Alias declaration for easier access to components directory
   alias: {
     "@components": fileURLToPath(new URL('./components', import.meta.url)),
+    "@content": fileURLToPath(new URL('./content', import.meta.url)),
+    "@types": fileURLToPath(new URL('./types', import.meta.url)),
   },
   // Global CSS: https://nuxt.com/docs/api/configuration/nuxt-config#css
   css: ['~/css/styles.scss'],
   build: {
-    transpile: ['@govflanders/vl-widget-polyfill']
+    transpile: ['@govflanders/vl-widget-polyfill'],
   },
   // Plugins to run before rendering page: https://nuxt.com/docs/api/configuration/nuxt-config#plugins-1
   plugins: [
@@ -61,7 +70,23 @@ export default defineNuxtConfig({
   ],
   // Modules: https://nuxt.com/docs/api/configuration/nuxt-config#modules-1
   modules: [
+    // https://github.com/davestewart/nuxt-content-assets
+    'nuxt-content-assets', // make sure to add before content!
     // https://content.nuxtjs.org/
     '@nuxt/content',
   ],
+  content: {
+    documentDriven: true,
+    highlight: {
+      theme: 'light-plus'
+    }
+  },
+  nitro: {
+    // define preset for nitro and which backend to serve the project
+    preset: "node-server",
+    prerender: {
+      routes: ['/404.html', '/ns/adres', '/doc/applicatieprofiel/adresregister'],
+      ignore: ['/api']
+    }
+  },
 })

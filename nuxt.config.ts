@@ -80,13 +80,5 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'light-plus'
     }
-  },
-  nitro: {
-    // define preset for nitro and which backend to serve the project
-    preset: "node-server",
-    prerender: {
-      routes: ['/404.html', '/ns/adres', '/doc/applicatieprofiel/adresregister'],
-      ignore: ['/api']
-    }
-  },
+  }
 })

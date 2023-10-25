@@ -2,16 +2,11 @@ import { defineNuxtConfig } from 'nuxt/config'
 import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
-  runtimeConfig: {
-    // private runtime env variables. Think of api keys: https://nuxt.com/docs/guide/going-further/runtime-config#environment-variables
-    // This is needed to pass the .env variables to the build process
-    EVENT_API: import.meta.env.VITE_EVENT_API,
-    // public runtime env variables
-    // public: {}
-  },
+  // https://nuxt.com/docs/getting-started/deployment#static-hosting
+  ssr: true,
   app: {
     head: {
-      title: 'data.vlaanderen.be',
+      title: 'OSLO-frontend-template',
       htmlAttrs: {
         lang: 'nl',
       },
@@ -76,7 +71,6 @@ export default defineNuxtConfig({
     '@nuxt/content',
   ],
   content: {
-    documentDriven: true,
     highlight: {
       theme: 'light-plus'
     }

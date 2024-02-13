@@ -1,4 +1,5 @@
 <template>
+  <div id="header-container"></div>
   <vl-content-header
     mod-large
     mod-show-mobile
@@ -22,28 +23,24 @@
 </template>
 
 <script setup lang="ts" name="contentHeader">
-import { Header } from '~/types/header'
+import type { Header } from '~/types/header'
 onMounted(() => {
   const headerScript = document.createElement('script')
   switch (import.meta.env.VITE_ENVIRONMENT) {
     case 'Test':
-      headerScript.setAttribute(
-        'src',
-        'https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/widget/99790a73-9a6b-4927-94ad-5df8ae9adf78/embed',
-      )
+      headerScript.src =
+        'https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/widget/99790a73-9a6b-4927-94ad-5df8ae9adf78/embed'
+      break
     case 'Production':
-      headerScript.setAttribute(
-        'src',
-        'https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/widget/b0dae312-e7a6-4612-978a-f0e3b2d975bf/embed',
-      )
+      headerScript.src =
+        'https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/widget/b0dae312-e7a6-4612-978a-f0e3b2d975bf/embed'
+      break
     default:
-      headerScript.setAttribute(
-        'src',
-        'https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/widget/99790a73-9a6b-4927-94ad-5df8ae9adf78/embed',
-      )
+      headerScript.src =
+        'https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/widget/99790a73-9a6b-4927-94ad-5df8ae9adf78/embed'
   }
-  document.head.appendChild(headerScript)
-})
 
+  document.getElementById('header-container')?.appendChild(headerScript)
+})
 defineProps<Header>()
 </script>

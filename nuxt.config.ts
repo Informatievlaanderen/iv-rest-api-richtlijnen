@@ -76,10 +76,5 @@ export default defineNuxtConfig({
     'nuxt-content-assets', // make sure to add before content!
     // https://content.nuxtjs.org/
     '@nuxt/content',
-  ],
-  content: {
-    highlight: {
-      theme: 'light-plus'
-    }
-  }
+  ]
 })

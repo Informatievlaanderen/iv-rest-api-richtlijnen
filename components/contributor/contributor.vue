@@ -1,5 +1,5 @@
 <template>
-  <span v-if="lastName">{{lastName }}&comma;&nbsp;</span>
+  <span v-if="lastName">{{ lastName }}&comma;&nbsp;</span>
   <span v-if="firstName">{{ firstName }}</span>
   &#45;
   <a v-if="workplace" :href="workplace?.href">{{ workplace?.name }}</a>
@@ -8,6 +8,6 @@
 </template>
 
 <script setup lang="ts" name="contributor">
-import { Contributor } from '~/types/contributor'
+import type { Contributor } from '~/types/contributor'
 defineProps<Contributor>()
 </script>

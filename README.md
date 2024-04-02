@@ -82,7 +82,7 @@ The css directory contains your custom imported css or Sass files. We use this t
 Custom directory that contains our customly defined typescript config files. Can be used shorthandedly in your code:
 
 ```typescript
-import { NavigationMenu } from '~/types/navigationMenu'
+import type { NavigationMenu } from '~/types/navigationMenu'
 ```
 
 ## Special files

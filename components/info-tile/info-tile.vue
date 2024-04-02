@@ -1,5 +1,10 @@
 <template>
-  <vl-info-tile tag-name="div" :href="href" :title="title" :subtitle="description">
+  <vl-info-tile
+    tag-name="div"
+    :href="href"
+    :title="title"
+    :subtitle="description"
+  >
     <template v-if="image" v-slot:badge>
       <vl-badge>
         <img :src="image?.src" :alt="image?.alt ?? 'placeholder'" />
@@ -10,7 +15,7 @@
 </template>
 
 <script setup lang="ts" name="infoTile">
-import { Dataset } from '~/types/dataset'
+import type { Dataset } from '~/types/dataset'
 
 const props = defineProps<Dataset>()
 defineExpose({ props })

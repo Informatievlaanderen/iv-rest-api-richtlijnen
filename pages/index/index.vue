@@ -1,22 +1,20 @@
 <template>
-  <vl-region>
-    <content-header
-      title="OSLO"
-      href="https://www.vlaanderen.be/digitaal-vlaanderen"
-      subtitle="Frontend template"
-    />
-    <vl-layout>
-      <vl-region>
-        <vl-grid>
-          <vl-column width="10" width-s="12">
-            <vl-title tag-name="h2" id="OSLO-Frontend">OSLO frontend</vl-title>
-            <vl-region v-html="data?.about" />
-          </vl-column>
-        </vl-grid>
-      </vl-region>
-    </vl-layout>
-    <content-footer />
-  </vl-region>
+  <content-header
+    title="OSLO"
+    href="https://www.vlaanderen.be/digitaal-vlaanderen"
+    subtitle="Frontend template"
+  />
+  <vl-layout>
+    <vl-region>
+      <vl-grid>
+        <vl-column width="10" width-s="12">
+          <vl-title tag-name="h2" id="OSLO-Frontend">OSLO frontend</vl-title>
+          <vl-region v-html="data?.about" />
+        </vl-column>
+      </vl-grid>
+    </vl-region>
+  </vl-layout>
+  <content-footer />
 </template>
 
 <script setup lang="ts">

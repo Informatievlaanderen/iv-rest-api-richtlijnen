@@ -1,10 +1,10 @@
 {
-  "name": "data.vlaanderen.be2.0",
-  "version": "1.0.0",
+  "name": "oslo-frontend-template",
+  "version": "1.0.1",
   "private": true,
   "engines": {
     "npm": ">=8.0.0",
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "dev": "nuxi dev",

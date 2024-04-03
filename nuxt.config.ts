@@ -5,8 +5,9 @@ export default defineNuxtConfig({
   // https://nuxt.com/docs/getting-started/deployment#static-hosting
   ssr: true,
   app: {
+    baseURL: '/doc/richtlijnen/iv-rest-api-richtlijnen',
     head: {
-      title: 'OSLO-frontend-template',
+      title: 'REST API richtlijnen - Digitaal Vlaanderen',
       htmlAttrs: {
         lang: 'nl',
       },

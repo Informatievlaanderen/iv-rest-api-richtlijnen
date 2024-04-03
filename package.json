@@ -1,6 +1,6 @@
 {
-  "name": "oslo-frontend-template",
-  "version": "1.0.1",
+  "name": "api-guidelines",
+  "version": "1.0.0",
   "private": true,
   "engines": {
     "npm": ">=8.0.0",

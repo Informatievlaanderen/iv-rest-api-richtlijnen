@@ -8,14 +8,14 @@
     <tbody>
       <tr v-for="row in rows">
         <td v-for="item in row">
-          {{ item }}
+          <vl-typography v-html="item" />
         </td>
       </tr>
     </tbody>
     <tfoot v-if="footer?.length" class="footer">
       <tr>
         <td v-for="row in footer">
-          {{ row }}
+          <vl-typography v-html="row" />
         </td>
       </tr>
     </tfoot>

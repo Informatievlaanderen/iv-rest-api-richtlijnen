@@ -1,3 +1,9 @@
 export interface Index {
-    about?: string,
+  description?: string,
+  introduction?: string,
+  guidelines?: string,
+  formGuidelines?: string,
+  notFound?: string,
+  serverError?: string,
+  clientError?: string,
 }

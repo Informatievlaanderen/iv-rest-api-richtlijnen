@@ -49,13 +49,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-  // needed for nuxt content assets that keeps hanging on build: https://github.com/davestewart/nuxt-content-assets/issues/49#issuecomment-1812810278
-  hooks: {
-    close: (nuxt) => {
-      if (!nuxt.options._prepare)
-        process.exit()
-    }
-  },
   // Alias declaration for easier access to components directory
   alias: {
     "@components": fileURLToPath(new URL('./components', import.meta.url)),
@@ -73,8 +66,6 @@ export default defineNuxtConfig({
   ],
   // Modules: https://nuxt.com/docs/api/configuration/nuxt-config#modules-1
   modules: [
-    // https://github.com/davestewart/nuxt-content-assets
-    'nuxt-content-assets', // make sure to add before content!
     // https://content.nuxtjs.org/
     '@nuxt/content',
   ]

@@ -2,25 +2,25 @@ VERSION := $(shell cat VERSION)
 PUBLISHEDIMAGE := $(shell cat PUBLISHED)
 
 build-base:
-	docker build -f Dockerfile.base --build-arg "NPM_AUTH_TOKEN=${NPM_AUTH_TOKEN}" -t informatievlaanderen/rest-api-guidelines-base:${VERSION} .
+	docker build -f Dockerfile.base --build-arg "NPM_AUTH_TOKEN=${NPM_AUTH_TOKEN}" -t informatievlaanderen/iv-rest-api-richtlijnen-base:${VERSION} .
 
 # first build-base should have been run
 build:
-	docker build -f Dockerfile.build --build-arg "VERSION=${VERSION}" -t informatievlaanderen/rest-api-guidelines:${VERSION} .
+	docker build -f Dockerfile.build --build-arg "VERSION=${VERSION}" -t informatievlaanderen/iv-rest-api-richtlijnen:${VERSION} .
 
 build-base-linux:
-	docker build --platform=linux/amd64 -f Dockerfile.base --build-arg "NPM_AUTH_TOKEN=${NPM_AUTH_TOKEN}" -t informatievlaanderen/rest-api-guidelines-base:${VERSION} .
+	docker build --platform=linux/amd64 -f Dockerfile.base --build-arg "NPM_AUTH_TOKEN=${NPM_AUTH_TOKEN}" -t informatievlaanderen/iv-rest-api-richtlijnen-base:${VERSION} .
 
 # first build-base should have been run
 build-linux:
-	docker build --platform=linux/amd64 -f Dockerfile.build --build-arg "VERSION=${VERSION}" -t informatievlaanderen/rest-api-guidelines:${VERSION} .
+	docker build --platform=linux/amd64 -f Dockerfile.build --build-arg "VERSION=${VERSION}" -t informatievlaanderen/iv-rest-api-richtlijnen:${VERSION} .
 
 run:
-	docker run -d --rm --name rest-api-guidelines -p 3000:3000 informatievlaanderen/rest-api-guidelines:${VERSION}
+	docker run -d --rm --name iv-rest-api-richtlijnen -p 3000:3000 informatievlaanderen/iv-rest-api-richtlijnen:${VERSION}
 
 stop:
-	docker stop rest-api-guidelines
+	docker stop iv-rest-api-richtlijnen
 
 publish:
-	docker tag informatievlaanderen/rest-api-guidelines:${VERSION} ${PUBLISHEDIMAGE}:${VERSION}
+	docker tag informatievlaanderen/iv-rest-api-richtlijnen:${VERSION} ${PUBLISHEDIMAGE}:${VERSION}
 	docker push ${PUBLISHEDIMAGE}:${VERSION}

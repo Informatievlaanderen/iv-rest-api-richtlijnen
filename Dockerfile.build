@@ -1,5 +1,5 @@
 ARG VERSION
-FROM informatievlaanderen/rest-api-guidelines-base:${VERSION} as BUILD
+FROM informatievlaanderen/iv-rest-api-richtlijnen-base:${VERSION} as BUILD
 
 WORKDIR /app
 

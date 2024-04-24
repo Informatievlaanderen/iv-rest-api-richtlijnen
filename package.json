@@ -1,6 +1,6 @@
 {
   "name": "rest_api_richtlijnen_frontend",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "private": true,
   "engines": {
     "npm": ">=8.0.0",

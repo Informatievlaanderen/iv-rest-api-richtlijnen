@@ -64,7 +64,7 @@
             <query-params-table />
           </vl-typography>
         </vl-column>
-        <vl-column width="9" width-s="10">
+        <vl-column width="9" width-s="12">
           <vl-title tag-name="h2" id="sem_interop_guidelines"
             >Semantische interoperabiliteit richtlijnen</vl-title
           >

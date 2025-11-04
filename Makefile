@@ -2,14 +2,14 @@ VERSION := $(shell cat VERSION)
 PUBLISHEDIMAGE := $(shell cat PUBLISHED)
 
 build-base:
-	docker build -f Dockerfile.base --build-arg "NPM_AUTH_TOKEN=${NPM_AUTH_TOKEN}" -t informatievlaanderen/iv-rest-api-richtlijnen-base:${VERSION} .
+	docker build -f Dockerfile.base --build-arg "NPM_TOKEN=${NPM_TOKEN}" -t informatievlaanderen/iv-rest-api-richtlijnen-base:${VERSION} .
 
 # first build-base should have been run
 build:
 	docker build -f Dockerfile.build --build-arg "VERSION=${VERSION}" -t informatievlaanderen/iv-rest-api-richtlijnen:${VERSION} .
 
 build-base-linux:
-	docker build --platform=linux/amd64 -f Dockerfile.base --build-arg "NPM_AUTH_TOKEN=${NPM_AUTH_TOKEN}" -t informatievlaanderen/iv-rest-api-richtlijnen-base:${VERSION} .
+	docker build --platform=linux/amd64 -f Dockerfile.base --build-arg "NPM_TOKEN=${NPM_TOKEN}" -t informatievlaanderen/iv-rest-api-richtlijnen-base:${VERSION} .
 
 # first build-base should have been run
 build-linux:
